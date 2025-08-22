@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados para Eletricista - Serviços Toledo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="index.html" class="header-link">Serviços Toledo</a></h1>
+            <p>Os melhores profissionais para sua casa estão aqui.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="resultados-busca">
+            <h2>Resultados para "<span id="termo-busca"></span>"</h2>
+            <script>
+                // Obtém o termo da busca da query string (?busca=...)
+                const params = new URLSearchParams(window.location.search);
+                const termo = params.get('busca') || 'Eletricista';
+                document.getElementById('termo-busca').textContent = termo;
+            </script>
+            <p>Encontramos 3 profissionais que podem atender sua necessidade.</p>
+
+            <div class="lista-resultados">
+                <div class="card-resultado">
+                    <img src="https://via.placeholder.com/100" alt="Foto do Profissional">
+                    <div class="info-resultado">
+                        <h3>João Silva <span class="selo-verificado-sm">✔ Verificado</span></h3>
+                        <p class="especialidade">Eletricista Residencial</p>
+                        <div class="avaliacao">
+                            <span>⭐ 4.9 (32 avaliações)</span>
+                        </div>
+                        <p class="descricao-curta">Mais de 15 anos de experiência com foco em segurança e qualidade para sua residência.</p>
+                    </div>
+                    <a href="perfil.html" class="btn-ver-perfil-resultado">Ver Perfil Completo</a>
+                </div>
+
+                <div class="card-resultado">
+                    <img src="https://via.placeholder.com/100" alt="Foto do Profissional">
+                    <div class="info-resultado">
+                        <h3>Roberto Mendes <span class="selo-verificado-sm">✔ Verificado</span></h3>
+                        <p class="especialidade">Eletricista Predial e Industrial</p>
+                        <div class="avaliacao">
+                            <span>⭐ 4.7 (18 avaliações)</span>
+                        </div>
+                        <p class="descricao-curta">Especialista em instalações de grande porte e quadros de força. Atendimento rápido e eficiente.</p>
+                    </div>
+                    <a href="perfil.html" class="btn-ver-perfil-resultado">Ver Perfil Completo</a>
+                </div>
+
+                <div class="card-resultado">
+                    <img src="https://via.placeholder.com/100" alt="Foto do Profissional">
+                    <div class="info-resultado">
+                        <h3>Ana Costa <span class="selo-verificado-sm">✔ Verificado</span></h3>
+                        <p class="especialidade">Especialista em Automação Residencial</p>
+                        <div class="avaliacao">
+                            <span>⭐ 5.0 (12 avaliações)</span>
+                        </div>
+                        <p class="descricao-curta">Instalação de sistemas de casa inteligente, iluminação e segurança. Tecnologia e conforto para seu lar.</p>
+                    </div>
+                    <a href="perfil.html" class="btn-ver-perfil-resultado">Ver Perfil Completo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="cadastro-profissional.html" class="header-link">É um profissional? Cadastre-se aqui</a></p>
+            <p>&copy; 2025 Serviços Toledo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
