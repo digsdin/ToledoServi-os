@@ -1,75 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de João Silva - Eletricista | Serviços Toledo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Perfil do Prestador - Serviços Toledo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Dark Mode automático
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark')
+                localStorage.theme = 'light'
+            } else {
+                document.documentElement.classList.add('dark')
+                localStorage.theme = 'dark'
+            }
+        }
+
+        // Função para pegar query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                nome: params.get('nome') || 'Nome do Prestador',
+                servico: params.get('servico') || 'Serviço',
+                email: params.get('email') || 'email@exemplo.com',
+                telefone: params.get('telefone') || '(00) 00000-0000',
+                descricao: params.get('descricao') || 'Descrição breve do prestador.',
+                avatar: params.get('avatar') || 'https://via.placeholder.com/150'
+            }
+        }
+
+        function populateProfile() {
+            const data = getQueryParams();
+            document.getElementById('perfil-nome').textContent = data.nome;
+            document.getElementById('perfil-servico').textContent = data.servico;
+            document.getElementById('perfil-email').textContent = data.email;
+            document.getElementById('perfil-telefone').textContent = data.telefone;
+            document.getElementById('perfil-descricao').textContent = data.descricao;
+            document.getElementById('perfil-avatar').src = data.avatar;
+        }
+
+        window.onload = populateProfile;
+    </script>
 </head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
 
-<body>
-
-    <header>
-        <div class="container">
-            <h1><a href="index.html" class="header-link">Serviços Toledo</a></h1>
-            <p>Os melhores profissionais para sua casa estão aqui.</p>
-        </div>
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Serviços Toledo</h1>
+        <button onclick="toggleTheme()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+            Alternar Tema
+        </button>
     </header>
 
-    <main class="container">
-        <div class="perfil-profissional">
-            <div class="perfil-header">
-                <img src="https://via.placeholder.com/150" alt="Foto de João Silva">
-                <div class="perfil-info">
-                    <h2>João Silva <span class="selo-verificado">✔ Verificado</span></h2>
-                    <p class="especialidade">Eletricista Residencial e Predial</p>
-                    <div class="avaliacao">
-                        <span>⭐ 4.9 (32 avaliações)</span>
-                    </div>
-                    <button class="btn-contato">Solicitar Orçamento</button>
+    <!-- Perfil do Prestador -->
+    <main class="max-w-4xl mx-auto mt-10 p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col md:flex-row items-center md:items-start gap-6 transition-transform transform hover:scale-105">
+            
+            <!-- Avatar -->
+            <img id="perfil-avatar" src="" alt="Foto do Prestador" class="w-40 h-40 rounded-full object-cover shadow-md">
+
+            <!-- Informações -->
+            <div class="flex-1 space-y-4">
+                <h2 id="perfil-nome" class="text-3xl font-bold"></h2>
+                <p id="perfil-servico" class="text-lg font-semibold text-blue-600 dark:text-blue-400"></p>
+                <p id="perfil-descricao" class="text-gray-700 dark:text-gray-300"></p>
+
+                <div class="space-y-1">
+                    <p><span class="font-semibold">Email:</span> <span id="perfil-email"></span></p>
+                    <p><span class="font-semibold">Telefone:</span> <span id="perfil-telefone"></span></p>
                 </div>
-            </div>
 
-            <div class="perfil-conteudo">
-                <section class="sobre">
-                    <h3>Sobre Mim</h3>
-                    <p>Com mais de 15 anos de experiência em instalações elétricas em Toledo e região, meu compromisso é
-                        com a segurança e a qualidade. Sou especialista em resolver problemas complexos e garantir que
-                        sua casa esteja sempre segura e funcional. Prezo pela pontualidade e pela limpeza do local de
-                        trabalho.</p>
-                </section>
-
-                <section class="servicos-oferecidos">
-                    <h3>Principais Serviços</h3>
-                    <ul>
-                        <li>Instalação e troca de chuveiros</li>
-                        <li>Troca de tomadas e interruptores</li>
-                        <li>Instalação de luminárias e ventiladores de teto</li>
-                        <li>Revisão completa do quadro de força</li>
-                        <li>Detecção e reparo de curtos-circuitos</li>
-                    </ul>
-                </section>
-
-                <section class="portfolio">
-                    <h3>Meu Portfólio</h3>
-                    <div class="portfolio-grid">
-                        <img src="https://via.placeholder.com/300x200" alt="Trabalho 1">
-                        <img src="https://via.placeholder.com/300x200" alt="Trabalho 2">
-                        <img src="https://via.placeholder.com/300x200" alt="Trabalho 3">
-                    </div>
-                </section>
+                <a href="#contato" class="inline-block mt-4 px-6 py-3 bg-green-600 text-white font-semibold rounded hover:bg-green-700 transition">
+                    Solicitar Serviço
+                </a>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p><a href="cadastro-profissional.html" class="header-link">É um profissional? Cadastre-se aqui</a></p>
-            <p>&copy;DigsWare - 2025 - Serviços Toledo. Todos os direitos reservados.</p>
+    <!-- Contato rápido -->
+    <section id="contato" class="max-w-4xl mx-auto mt-10 p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
+            <h3 class="text-2xl font-bold mb-4">Entre em contato</h3>
+            <p>Email: contato@servicostoledo.com.br</p>
+            <p>Telefone: (35) 0000-0000</p>
+            <p>WhatsApp: (35) 9 0000-0000</p>
         </div>
-    </footer>
+    </section>
 
 </body>
-
 </html>
