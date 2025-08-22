@@ -1,73 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços Toledo - Encontre Profissionais de Confiança</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços Toledo - Eletricista, Encanador, Pedreiro, Pintor</title>
+  <meta name="description" content="Precisa de eletricista, encanador, pedreiro ou pintor em Toledo - MG? Conectamos você a profissionais de confiança e verificados. Solicite agora.">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-    <header>
-        <div class="container">
-            <h1>Serviços Toledo</h1>
-            <p>Os melhores profissionais para sua casa estão aqui.</p>
+  <!-- Hero -->
+  <header class="bg-blue-600 text-white">
+    <div class="max-w-5xl mx-auto px-6 py-16 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Precisando de eletricista, encanador, pedreiro ou pintor em Toledo - MG?</h1>
+      <p class="text-lg md:text-xl mb-6">Conectamos você apenas com profissionais verificados e de confiança.</p>
+      <a href="#formulario" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">Solicitar Serviço Agora</a>
+    </div>
+  </header>
+
+  <!-- Como funciona -->
+  <section class="py-16 bg-white" id="como-funciona">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold mb-8">Como funciona?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-100 rounded-xl shadow">
+          <span class="text-4xl">📝</span>
+          <h3 class="text-lg font-semibold mt-4">1. Você faz o pedido</h3>
+          <p class="text-gray-600 mt-2">Preencha o formulário em menos de 1 minuto.</p>
         </div>
-    </header>
-
-    <main class="container">
-        <section class="busca">
-            <h2>Encontre o profissional ideal</h2>
-            <form id="form-busca" action="resultados.html">
-                <input type="text" placeholder="Qual serviço você precisa? (ex: Eletricista)">
-                <input type="text" value="Toledo, MG" disabled>
-                <button type="submit">Buscar</button>
-            </form>
-        </section>
-
-        <section class="destaques">
-            <h2>Profissionais em Destaque</h2>
-            <div class="profissionais-grid">
-                <div class="card-profissional">
-                    <img src="https://via.placeholder.com/150" alt="Foto do Profissional">
-                    <h3>João Silva</h3>
-                    <p class="especialidade">Eletricista</p>
-                    <div class="avaliacao">
-                        <span>⭐ 4.9 (32 avaliações)</span>
-                    </div>
-                    <a href="perfil.html" class="btn-ver-perfil">Ver Perfil</a>
-                </div>
-
-                <div class="card-profissional">
-                    <img src="https://via.placeholder.com/150" alt="Foto do Profissional">
-                    <h3>Maria Oliveira</h3>
-                    <p class="especialidade">Pintora</p>
-                    <div class="avaliacao">
-                        <span>⭐ 4.8 (25 avaliações)</span>
-                    </div>
-                    <a href="perfil.html" class="btn-ver-perfil">Ver Perfil</a>
-                </div>
-
-                <div class="card-profissional">
-                    <img src="https://via.placeholder.com/150" alt="Foto do Profissional">
-                    <h3>Carlos Pereira</h3>
-                    <p class="especialidade">Encanador</p>
-                    <div class="avaliacao">
-                        <span>⭐ 5.0 (41 avaliações)</span>
-                    </div>
-                    <a href="perfil.html" class="btn-ver-perfil">Ver Perfil</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p><a href="cadastro-profissional.html" class="header-link">É um profissional? Cadastre-se aqui</a></p>
-            <p>&copy;DigsWare - 2025 -  Serviços Toledo. Todos os direitos reservados.</p>
+        <div class="p-6 bg-gray-100 rounded-xl shadow">
+          <span class="text-4xl">🔍</span>
+          <h3 class="text-lg font-semibold mt-4">2. Encontramos o prestador</h3>
+          <p class="text-gray-600 mt-2">Selecionamos um profissional verificado em Toledo.</p>
         </div>
-    </footer>
+        <div class="p-6 bg-gray-100 rounded-xl shadow">
+          <span class="text-4xl">⚡</span>
+          <h3 class="text-lg font-semibold mt-4">3. O serviço é feito</h3>
+          <p class="text-gray-600 mt-2">O profissional vai até você e resolve seu problema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- Vantagens -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold mb-8">Por que escolher o Serviços Toledo?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-4 bg-white rounded-lg shadow flex items-center gap-3">
+          <span class="text-green-500 text-2xl">✅</span>
+          <p>Profissionais verificados</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow flex items-center gap-3">
+          <span class="text-green-500 text-2xl">✅</span>
+          <p>Atendimento rápido em Toledo-MG</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow flex items-center gap-3">
+          <span class="text-green-500 text-2xl">✅</span>
+          <p>Sem dor de cabeça, sem golpe</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow flex items-center gap-3">
+          <span class="text-green-500 text-2xl">✅</span>
+          <p>Suporte em caso de imprevistos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de Solicitação -->
+  <!-- Formulário de Solicitação -->
+<section class="py-16 bg-white" id="formulario">
+  <div class="max-w-2xl mx-auto px-6">
+    <h2 class="text-2xl font-bold text-center mb-8">Peça seu serviço agora</h2>
+    <form action="https://formspree.io/f/mjkonyvd" method="POST" class="space-y-4 bg-gray-100 p-6 rounded-xl shadow">
+      <input type="text" name="nome" placeholder="Seu nome" required class="w-full p-3 rounded border border-gray-300">
+      <input type="tel" name="telefone" placeholder="Seu WhatsApp" required class="w-full p-3 rounded border border-gray-300">
+      <input type="text" name="endereco" placeholder="Endereço (bairro/cidade)" required class="w-full p-3 rounded border border-gray-300">
+      <select name="servico" required class="w-full p-3 rounded border border-gray-300">
+        <option value="">Selecione o serviço</option>
+        <option value="Eletricista">Eletricista</option>
+        <option value="Encanador">Encanador</option>
+        <option value="Pedreiro">Pedreiro</option>
+        <option value="Pintor">Pintor</option>
+      </select>
+      <textarea name="descricao" placeholder="Descreva o problema" rows="4" class="w-full p-3 rounded border border-gray-300"></textarea>
+      <select name="urgencia" required class="w-full p-3 rounded border border-gray-300">
+        <option value="Agora">Agora</option>
+        <option value="Hoje">Hoje</option>
+        <option value="Agendar">Agendar data</option>
+      </select>
+      <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg shadow hover:bg-blue-700 transition">Enviar Pedido</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Cadastro Prestadores -->
+  <!-- Cadastro Prestadores -->
+<section class="py-16 bg-blue-600 text-white text-center" id="cadastro-prestadores">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-2xl font-bold mb-6">Você é prestador de serviços em Toledo?</h2>
+    <p class="mb-6">Cadastre-se para receber clientes qualificados e aumentar sua renda.</p>
+    
+    <form action="https://formspree.io/f/xdkdqeor" method="POST" class="space-y-4 bg-white text-gray-800 p-6 rounded-xl shadow max-w-md mx-auto">
+      <input type="text" name="nome" placeholder="Seu nome completo" required class="w-full p-3 rounded border border-gray-300">
+      <input type="tel" name="telefone" placeholder="WhatsApp para contato" required class="w-full p-3 rounded border border-gray-300">
+      <input type="text" name="bairro" placeholder="Bairro em Toledo onde atende" required class="w-full p-3 rounded border border-gray-300">
+      <select name="servico" required class="w-full p-3 rounded border border-gray-300">
+        <option value="">Qual serviço você oferece?</option>
+        <option value="Eletricista">Eletricista</option>
+        <option value="Encanador">Encanador</option>
+        <option value="Pedreiro">Pedreiro</option>
+        <option value="Pintor">Pintor</option>
+      </select>
+      <textarea name="experiencia" placeholder="Descreva sua experiência (anos de trabalho, especialidades...)" rows="4" class="w-full p-3 rounded border border-gray-300"></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg shadow hover:bg-blue-700 transition">Cadastrar</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center">
+    <p class="text-sm">© 2025 Serviços Toledo - Conectando clientes a profissionais de confiança em Toledo-MG</p>
+    <p class="text-sm mt-2">Contato: seuWhatsAppAqui</p>
+  </footer>
+
 </body>
 </html>
