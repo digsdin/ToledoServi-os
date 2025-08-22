@@ -106,17 +106,26 @@
         const card = document.createElement('div');
         card.className = "bg-white rounded-2xl shadow p-6 hover:shadow-lg transition fade-enter";
         card.innerHTML = `
-          <h2 class="text-xl font-bold mb-2">${p["Nome completo"]}</h2>
-          <p class="text-gray-600 mb-1"><strong>Profissão:</strong> ${p["Profissão"] || '-'}</p>
-          <p class="text-gray-600 mb-1"><strong>Email:</strong> ${p["Email"] || '-'}</p>
-          <p class="text-gray-600 mb-1"><strong>Telefone:</strong> <a href="tel:${p["Telefone / Whatsapp"]}" class="text-blue-600 hover:underline">${p["Telefone / Whatsapp"] || '-'}</a></p>
-          <p class="text-gray-600 mb-1"><strong>Cidade:</strong> ${p["Cidade"] || '-'}</p>
-          <p class="text-gray-600 mb-1"><strong>Bairros atendidos:</strong> ${p["Bairros Atendidos"] || '-'}</p>
-          <p class="text-gray-600 mb-1"><strong>Disponibilidade:</strong> ${p["Disponibilidade"] || '-'}</p>
-          <p class="text-gray-600 mb-1"><strong>Faixa de preço:</strong> ${p["Faixa de preço por hora"] || '-'}</p>
-          <p class="text-gray-600 mb-1"><strong>Experiência / Descrição:</strong> ${p["Experiência / Descrição"] || '-'}</p>
-          <p class="text-gray-600 mb-3"><strong>Chamada de emergência:</strong> ${p["Aceito chamados de emergência"] || '-'}</p>
-          <a href="https://wa.me/${p["Telefone / Whatsapp"].replace(/\D/g,'')}" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">WhatsApp</a>
+            <div class="flex flex-col h-full">
+              <h2 class="text-2xl font-bold mb-3 text-center text-gray-800">${p["Nome completo"]}</h2>
+              <div class="flex flex-col gap-2 flex-grow">
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Profissão:</span> ${p["Profissão"] || '-'}</p>
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Email:</span> <a href="mailto:${p["Email"]}" class="text-blue-600 hover:underline">${p["Email"] || '-'}</a></p>
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Telefone:</span> <a href="tel:${p["Telefone / Whatsapp"]}" class="text-blue-600 hover:underline">${p["Telefone / Whatsapp"] || '-'}</a></p>
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Cidade:</span> ${p["Cidade"] || '-'}</p>
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Bairros atendidos:</span> ${p["Bairros Atendidos"] || '-'}</p>
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Disponibilidade:</span> ${p["Disponibilidade"] || '-'}</p>
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Faixa de preço:</span> <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded">${p["Faixa de preço por hora"] || '-'}</span></p>
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Experiência / Descrição:</span> <span class="italic">${p["Experiência / Descrição"] || '-'}</span></p>
+                <p class="text-gray-700"><span class="font-semibold text-gray-900">Chamada de emergência:</span> <span class="${p["Aceito chamados de emergência"] === "Sim" ? "text-green-600 font-bold" : "text-red-600 font-bold"}">${p["Aceito chamados de emergência"] || '-'}</span></p>
+              </div>
+                <div class="flex justify-center mt-6">
+                <a href="https://wa.me/${p["Telefone / Whatsapp"] ? p["Telefone / Whatsapp"].replace(/\D/g,'') : ''}?text=ol%C3%A1%20vim%20pelo%20aplicativo%20Servi%C3%A7osToledo%2C%20gostaria%20dos%20seus%20servi%C3%A7os" target="_blank" class="inline-flex items-center gap-2 bg-green-500 text-white px-5 py-2 rounded-lg shadow hover:bg-green-600 transition">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.028-.967-.271-.099-.469-.148-.667.15-.198.297-.767.967-.94 1.166-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.667-1.611-.915-2.207-.242-.579-.487-.5-.667-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.271.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.205 5.077 4.377.711.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413-.074-.124-.271-.198-.571-.347z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
         `;
         container.appendChild(card);
         setTimeout(()=>{ card.classList.add('fade-enter-active'); }, 10);
@@ -171,5 +180,27 @@
     });
 
   </script>
+  <!-- Rodapé -->
+  <footer class="border-t bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-bold text-lg mb-2">ServiçosToledo</h4>
+        <p class="text-gray-600 text-sm">Conectamos clientes a profissionais confiáveis em Toledo — MG.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-2">Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-blue-600" href="index.html">Início</a></li>
+          <li><a class="hover:text-blue-600" href="prestadores.html">Prestadores</a></li>
+          <li><a class="hover:text-blue-600" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-2">Contato</h4>
+        <p class="text-sm text-gray-600">Toledo — MG • contato@servicostoledo.com.br</p>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-500 py-4 border-t">© 2025 ServiçosToledo. Todos os direitos reservados.</div>
+  </footer>
 </body>
 </html>
