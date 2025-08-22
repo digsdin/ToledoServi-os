@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prestadores de Serviços — ServiçosToledo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
+     crossorigin="anonymous"></script>
   <style>
-    .fade-enter { opacity: 0; transform: translateY(10px); }
-    .fade-enter-active { opacity: 1; transform: translateY(0); transition: all 0.3s ease; }
-    .fade-exit { opacity: 1; transform: translateY(0); }
-    .fade-exit-active { opacity: 0; transform: translateY(10px); transition: all 0.3s ease; }
+    .fade-enter {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    .fade-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.3s ease;
+    }
+
+    .fade-exit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-exit-active {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
   </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Header fixo -->
@@ -26,9 +47,10 @@
         <a href="index.html" class="hover:text-white">Início</a>
         <a href="contato.html" class="hover:text-white">Contato</a>
         <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
-                <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
+        <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
 
-        <a href="prestadores.html" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
+        <a href="prestadores.html"
+          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
       </nav>
       <button id="menuBtn"
         class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
@@ -42,6 +64,7 @@
         <a href="index.html" class="py-2 border-b text-white">Início</a>
         <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
         <a href="contato.html" class="py-2 border-b text-white">Contato</a>
+        <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
         <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
       </div>
     </div>
@@ -54,7 +77,8 @@
 
   <main class="max-w-6xl mx-auto px-6 py-20 mt-20">
     <h1 class="text-3xl md:text-4xl font-bold mb-4 text-center">Prestadores de Serviços em Toledo - MG</h1>
-    <p class="text-lg text-gray-700 mb-6 text-center">Encontre profissionais qualificados para atender suas necessidades.</p>      
+    <p class="text-lg text-gray-700 mb-6 text-center">Encontre profissionais qualificados para atender suas
+      necessidades.</p>
 
     <!-- Filtros e Ordenação -->
     <div class="flex flex-col md:flex-row md:justify-between gap-4 mb-6">
@@ -65,7 +89,7 @@
         <option value="Pedreiro">Pedreiro</option>
         <option value="Pintor">Pintor</option>
         <option value="Outros">Outros</option>
-        
+
       </select>
 
       <select id="filterDisponibilidade" class="p-2 border rounded">
@@ -123,7 +147,7 @@
                 <p class="text-gray-700"><span class="font-semibold text-gray-900">Chamada de emergência:</span> <span class="${p["Aceito chamados de emergência"] === "Sim" ? "text-green-600 font-bold" : "text-red-600 font-bold"}">${p["Aceito chamados de emergência"] || '-'}</span></p>
               </div>
                 <div class="flex justify-center mt-6">
-                <a href="https://wa.me/${p["Telefone / Whatsapp"] ? p["Telefone / Whatsapp"].replace(/\D/g,'') : ''}?text=ol%C3%A1%20vim%20pelo%20aplicativo%20Servi%C3%A7osToledo%2C%20gostaria%20dos%20seus%20servi%C3%A7os" target="_blank" class="inline-flex items-center gap-2 bg-green-500 text-white px-5 py-2 rounded-lg shadow hover:bg-green-600 transition">
+                <a href="https://wa.me/${p["Telefone / Whatsapp"] ? p["Telefone / Whatsapp"].replace(/\D/g, '') : ''}?text=ol%C3%A1%20vim%20pelo%20aplicativo%20Servi%C3%A7osToledo%2C%20gostaria%20dos%20seus%20servi%C3%A7os" target="_blank" class="inline-flex items-center gap-2 bg-green-500 text-white px-5 py-2 rounded-lg shadow hover:bg-green-600 transition">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.028-.967-.271-.099-.469-.148-.667.15-.198.297-.767.967-.94 1.166-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.667-1.611-.915-2.207-.242-.579-.487-.5-.667-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.271.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.205 5.077 4.377.711.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413-.074-.124-.271-.198-.571-.347z"/></svg>
                   WhatsApp
                 </a>
@@ -131,14 +155,14 @@
             </div>
         `;
         container.appendChild(card);
-        setTimeout(()=>{ card.classList.add('fade-enter-active'); }, 10);
+        setTimeout(() => { card.classList.add('fade-enter-active'); }, 10);
       });
     }
 
     Papa.parse(csvUrl, {
       download: true,
       header: true,
-      complete: function(results) {
+      complete: function (results) {
         prestadores = results.data;
         renderCards(prestadores);
       }
@@ -157,18 +181,18 @@
       const fPreco = document.getElementById('filterFaixaPreco').value;
       const sort = document.getElementById('sortSelect').value;
 
-      if(fProf) filtered = filtered.filter(p => p["Profissão"] === fProf);
-      if(fDisp) filtered = filtered.filter(p => p["Disponibilidade"] === fDisp);
-      if(fPreco) filtered = filtered.filter(p => p["Faixa de preço por hora"] === fPreco);
+      if (fProf) filtered = filtered.filter(p => p["Profissão"] === fProf);
+      if (fDisp) filtered = filtered.filter(p => p["Disponibilidade"] === fDisp);
+      if (fPreco) filtered = filtered.filter(p => p["Faixa de preço por hora"] === fPreco);
 
-      if(sort === "preco") {
-        filtered.sort((a,b)=>{
+      if (sort === "preco") {
+        filtered.sort((a, b) => {
           const aNum = parseInt(a["Faixa de preço por hora"].match(/\d+/)) || 0;
           const bNum = parseInt(b["Faixa de preço por hora"].match(/\d+/)) || 0;
           return aNum - bNum;
         });
-      } else if(sort === "experiencia") {
-        filtered.sort((a,b)=> (a["Experiência / Descrição"] || '').localeCompare(b["Experiência / Descrição"] || ''));
+      } else if (sort === "experiencia") {
+        filtered.sort((a, b) => (a["Experiência / Descrição"] || '').localeCompare(b["Experiência / Descrição"] || ''));
       }
 
       renderCards(filtered);
@@ -176,7 +200,7 @@
 
     // Scroll suave
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e){
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
@@ -203,7 +227,9 @@
         <p class="text-sm text-gray-600">Toledo — MG • contato@servicostoledo.com.br</p>
       </div>
     </div>
-    <div class="text-center text-xs text-gray-500 py-4 border-t">© 2025 ServiçosToledo. Todos os direitos reservados.</div>
+    <div class="text-center text-xs text-gray-500 py-4 border-t">© 2025 ServiçosToledo. Todos os direitos reservados.
+    </div>
   </footer>
 </body>
+
 </html>
