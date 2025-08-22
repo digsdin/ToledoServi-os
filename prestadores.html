@@ -16,28 +16,31 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+  <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
-        <span class="inline-flex h-8 w-8 rounded-xl bg-blue-600"></span>
-        <span class="text-2xl font-extrabold tracking-tight text-blue-700">ServiçosToledo</span>
+        <span class="inline-flex h-8 w-8 rounded-xl bg-white"></span>
+        <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
-        <a href="index.html" class="hover:text-blue-600">Início</a>
-        <a href="#beneficios" class="hover:text-blue-600">Benefícios</a>
-        <a href="#cadastro" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
+      <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
+        <a href="prestadores.html" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
       </nav>
-      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-gray-200">
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+      <button id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
+        <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
         </svg>
       </button>
     </div>
     <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
       <div class="flex flex-col gap-3 font-semibold">
-        <a href="index.html" class="py-2 border-b">Início</a>
-        <a href="#beneficios" class="py-2 border-b">Benefícios</a>
-        <a href="#cadastro" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
+        <a href="index.html" class="py-2 border-b text-white">Início</a>
+        <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
+        <a href="contato.html" class="py-2 border-b text-white">Contato</a>
+        <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
       </div>
     </div>
   </header>
