@@ -38,7 +38,9 @@
         <a href="index.html" class="hover:text-white">Início</a>
         <a href="contato.html" class="hover:text-white">Contato</a>
         <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
-        <a href="prestadores.html" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
+        <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
+        <a href="prestadores.html"
+          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
       </nav>
       <button id="menuBtn"
         class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
@@ -52,7 +54,9 @@
         <a href="index.html" class="py-2 border-b text-white">Início</a>
         <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
         <a href="contato.html" class="py-2 border-b text-white">Contato</a>
+        <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
         <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
+
       </div>
     </div>
     <script>
@@ -120,50 +124,28 @@
   </section>
 
   <!-- Formulário de Solicitação -->
-  <section id="solicitacao" class="py-20">
-    <div class="container mx-auto px-6 max-w-2xl">
-      <h2 class="text-3xl font-bold text-center mb-8">Solicite seu Serviço</h2>
-      <form action="https://formspree.io/f/mjkonyvd" method="POST"
-        class="bg-white p-8 rounded-xl shadow-lg space-y-6 fade-in">
-        <div>
-          <label class="block font-semibold mb-2">Nome completo</label>
-          <input type="text" name="name" required
-            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div>
-          <label class="block font-semibold mb-2">Email</label>
-          <input type="email" name="email" required
-            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div>
-          <label class="block font-semibold mb-2">Telefone</label>
-          <input type="tel" name="phone" required
-            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div>
-          <label class="block font-semibold mb-2">Tipo de Serviço</label>
-          <select name="service" required
-            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="">Selecione...</option>
-            <option value="Eletricista">Eletricista</option>
-            <option value="Encanador">Encanador</option>
-            <option value="Pintor">Pintor</option>
-            <option value="Pedreiro">Pedreiro</option>
-          </select>
-        </div>
-        <div>
-          <label class="block font-semibold mb-2">Descrição</label>
-          <textarea name="description" rows="4" required
-            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-        <button type="submit"
-          class="w-full bg-gray-600 text-white font-semibold p-3 rounded-lg shadow hover:bg-blue-700 transition">Enviar
-          Solicitação</button>
-      </form>
-    </div>
-  </section>
+<section id="solicitacao" class="py-20">
+  <div class="container mx-auto px-6 max-w-2xl">
+    <h2 class="text-3xl font-bold text-center mb-8">Solicite seu Serviço</h2>
 
- <!-- Rodapé -->
+    <!-- Substitua o SRC abaixo pelo link de incorporação do seu Google Forms -->
+    <div class="bg-white p-4 rounded-xl shadow-lg fade-in">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfjH2k2fEaF1XbpBNkCvNnm4kG33xKjIAOlSk7WDWstCdmI7g/viewform?usp=dialog" 
+        width="100%" 
+        height="900" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        class="w-full rounded-lg">
+        Carregando…
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Rodapé -->
   <footer class="border-t bg-white">
     <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
       <div>
@@ -183,7 +165,8 @@
         <p class="text-sm text-gray-600">Toledo — MG • contato@servicostoledo.com.br</p>
       </div>
     </div>
-    <div class="text-center text-xs text-gray-500 py-4 border-t">© 2025 ServiçosToledo. Todos os direitos reservados.</div>
+    <div class="text-center text-xs text-gray-500 py-4 border-t">© 2025 ServiçosToledo. Todos os direitos reservados.
+    </div>
   </footer>
 
   <!-- JS animações -->
