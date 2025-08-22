@@ -37,8 +37,8 @@
       <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
         <a href="index.html" class="hover:text-white">Início</a>
         <a href="contato.html" class="hover:text-white">Contato</a>
-        <a href="prestadores.html"
-          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
+        <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
+        <a href="prestadores.html" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
       </nav>
       <button id="menuBtn"
         class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
@@ -50,6 +50,7 @@
     <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
       <div class="flex flex-col gap-3 font-semibold">
         <a href="index.html" class="py-2 border-b text-white">Início</a>
+        <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
         <a href="contato.html" class="py-2 border-b text-white">Contato</a>
         <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
       </div>
@@ -164,11 +165,27 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-8">
-    <div class="container mx-auto text-center px-6">
-      <p>&copy; 2025 ServiçosToledo - Todos os direitos reservados.</p>
+ <!-- Rodapé -->
+  <footer class="border-t bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-bold text-lg mb-2">ServiçosToledo</h4>
+        <p class="text-gray-600 text-sm">Conectamos clientes a profissionais confiáveis em Toledo — MG.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-2">Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-blue-600" href="index.html">Início</a></li>
+          <li><a class="hover:text-blue-600" href="prestadores.html">Prestadores</a></li>
+          <li><a class="hover:text-blue-600" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-2">Contato</h4>
+        <p class="text-sm text-gray-600">Toledo — MG • contato@servicostoledo.com.br</p>
+      </div>
     </div>
+    <div class="text-center text-xs text-gray-500 py-4 border-t">© 2025 ServiçosToledo. Todos os direitos reservados.</div>
   </footer>
 
   <!-- JS animações -->

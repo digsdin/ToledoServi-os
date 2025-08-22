@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestadores de Serviços — ServiçosToledo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <style>
+    .fade-enter { opacity: 0; transform: translateY(10px); }
+    .fade-enter-active { opacity: 1; transform: translateY(0); transition: all 0.3s ease; }
+    .fade-exit { opacity: 1; transform: translateY(0); }
+    .fade-exit-active { opacity: 0; transform: translateY(10px); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header fixo -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="inline-flex h-8 w-8 rounded-xl bg-white"></span>
+        <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
+        <a href="prestadores.html" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
+      </nav>
+      <button id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
+        <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
+      <div class="flex flex-col gap-3 font-semibold">
+        <a href="index.html" class="py-2 border-b text-white">Início</a>
+        <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
+        <a href="contato.html" class="py-2 border-b text-white">Contato</a>
+        <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
+      </div>
+    </div>
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-20 mt-20">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-center">Prestadores de Serviços em Toledo - MG</h1>
+    <p class="text-lg text-gray-700 mb-6 text-center">Encontre profissionais qualificados para atender suas necessidades.</p>      
+
+    <!-- Filtros e Ordenação -->
+    <div class="flex flex-col md:flex-row md:justify-between gap-4 mb-6">
+      <select id="filterProfissao" class="p-2 border rounded">
+        <option value="">Filtrar por profissão</option>
+        <option value="Eletricista">Eletricista</option>
+        <option value="Encanador">Encanador</option>
+        <option value="Pedreiro">Pedreiro</option>
+        <option value="Pintor">Pintor</option>
+        <option value="Outros">Outros</option>
+      </select>
+
+      <select id="filterDisponibilidade" class="p-2 border rounded">
+        <option value="">Filtrar por disponibilidade</option>
+        <option value="Comercial">Comercial</option>
+        <option value="Plantão Emergencia">Plantão Emergência</option>
+        <option value="Finais de semana">Finais de semana</option>
+        <option value="Horarios flexiveis">Horários flexíveis</option>
+      </select>
+
+      <select id="filterFaixaPreco" class="p-2 border rounded">
+        <option value="">Filtrar por faixa de preço</option>
+        <option value="até 60">até 60</option>
+        <option value="60 a 100">60 a 100</option>
+        <option value="100-300">100-300</option>
+        <option value="300+">300+</option>
+        <option value="A combinar">A combinar</option>
+      </select>
+
+      <select id="sortSelect" class="p-2 border rounded">
+        <option value="">Ordenar</option>
+        <option value="preco">Preço (menor → maior)</option>
+        <option value="experiencia">Experiência (alfabética)</option>
+      </select>
+    </div>
+
+    <div id="prestadoresContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <!-- Cards dos prestadores vão aparecer aqui -->
+    </div>
+  </main>
+
+  <script>
+    const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXeFXLD20gzeZsVhjPxu2f3Fo0ms8fotFfHk9TiZAYCJ9SFpVGcrjgi1CnUmD6dM6t1Uy1IbjwJPYv/pub?output=csv";
+    let prestadores = [];
+    const container = document.getElementById('prestadoresContainer');
+
+    function renderCards(data) {
+      container.innerHTML = '';
+      data.forEach(p => {
+        if (!p["Nome completo"]) return;
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl shadow p-6 hover:shadow-lg transition fade-enter";
+        card.innerHTML = `
+          <h2 class="text-xl font-bold mb-2">${p["Nome completo"]}</h2>
+          <p class="text-gray-600 mb-1"><strong>Profissão:</strong> ${p["Profissão"] || '-'}</p>
+          <p class="text-gray-600 mb-1"><strong>Email:</strong> ${p["Email"] || '-'}</p>
+          <p class="text-gray-600 mb-1"><strong>Telefone:</strong> <a href="tel:${p["Telefone / Whatsapp"]}" class="text-blue-600 hover:underline">${p["Telefone / Whatsapp"] || '-'}</a></p>
+          <p class="text-gray-600 mb-1"><strong>Cidade:</strong> ${p["Cidade"] || '-'}</p>
+          <p class="text-gray-600 mb-1"><strong>Bairros atendidos:</strong> ${p["Bairros Atendidos"] || '-'}</p>
+          <p class="text-gray-600 mb-1"><strong>Disponibilidade:</strong> ${p["Disponibilidade"] || '-'}</p>
+          <p class="text-gray-600 mb-1"><strong>Faixa de preço:</strong> ${p["Faixa de preço por hora"] || '-'}</p>
+          <p class="text-gray-600 mb-1"><strong>Experiência / Descrição:</strong> ${p["Experiência / Descrição"] || '-'}</p>
+          <p class="text-gray-600 mb-3"><strong>Chamada de emergência:</strong> ${p["Aceito chamados de emergência"] || '-'}</p>
+          <a href="https://wa.me/${p["Telefone / Whatsapp"].replace(/\D/g,'')}" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">WhatsApp</a>
+        `;
+        container.appendChild(card);
+        setTimeout(()=>{ card.classList.add('fade-enter-active'); }, 10);
+      });
+    }
+
+    Papa.parse(csvUrl, {
+      download: true,
+      header: true,
+      complete: function(results) {
+        prestadores = results.data;
+        renderCards(prestadores);
+      }
+    });
+
+    // Filtros
+    document.getElementById('filterProfissao').addEventListener('change', applyFilters);
+    document.getElementById('filterDisponibilidade').addEventListener('change', applyFilters);
+    document.getElementById('filterFaixaPreco').addEventListener('change', applyFilters);
+    document.getElementById('sortSelect').addEventListener('change', applyFilters);
+
+    function applyFilters() {
+      let filtered = [...prestadores];
+      const fProf = document.getElementById('filterProfissao').value;
+      const fDisp = document.getElementById('filterDisponibilidade').value;
+      const fPreco = document.getElementById('filterFaixaPreco').value;
+      const sort = document.getElementById('sortSelect').value;
+
+      if(fProf) filtered = filtered.filter(p => p["Profissão"] === fProf);
+      if(fDisp) filtered = filtered.filter(p => p["Disponibilidade"] === fDisp);
+      if(fPreco) filtered = filtered.filter(p => p["Faixa de preço por hora"] === fPreco);
+
+      if(sort === "preco") {
+        filtered.sort((a,b)=>{
+          const aNum = parseInt(a["Faixa de preço por hora"].match(/\d+/)) || 0;
+          const bNum = parseInt(b["Faixa de preço por hora"].match(/\d+/)) || 0;
+          return aNum - bNum;
+        });
+      } else if(sort === "experiencia") {
+        filtered.sort((a,b)=> (a["Experiência / Descrição"] || '').localeCompare(b["Experiência / Descrição"] || ''));
+      }
+
+      renderCards(filtered);
+    }
+
+    // Scroll suave
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+  </script>
+</body>
+</html>

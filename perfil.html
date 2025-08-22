@@ -1,98 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Prestador - Serviços Toledo</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Dark Mode automático
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Prestador - Serviços Toledo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fade-in animation */
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.6s forwards; }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
-        function toggleTheme() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark')
-                localStorage.theme = 'light'
-            } else {
-                document.documentElement.classList.add('dark')
-                localStorage.theme = 'dark'
-            }
-        }
+    /* Card hover */
+    .card-hover:hover { transform: translateY(-5px); transition: 0.3s; }
 
-        // Função para pegar query parameters
-        function getQueryParams() {
-            const params = new URLSearchParams(window.location.search);
-            return {
-                nome: params.get('nome') || 'Nome do Prestador',
-                servico: params.get('servico') || 'Serviço',
-                email: params.get('email') || 'email@exemplo.com',
-                telefone: params.get('telefone') || '(00) 00000-0000',
-                descricao: params.get('descricao') || 'Descrição breve do prestador.',
-                avatar: params.get('avatar') || 'https://via.placeholder.com/150'
-            }
-        }
+    /* Botão principal */
+    .btn-primary { @apply bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300; }
 
-        function populateProfile() {
-            const data = getQueryParams();
-            document.getElementById('perfil-nome').textContent = data.nome;
-            document.getElementById('perfil-servico').textContent = data.servico;
-            document.getElementById('perfil-email').textContent = data.email;
-            document.getElementById('perfil-telefone').textContent = data.telefone;
-            document.getElementById('perfil-descricao').textContent = data.descricao;
-            document.getElementById('perfil-avatar').src = data.avatar;
-        }
-
-        window.onload = populateProfile;
-    </script>
+    /* Tag de serviço */
+    .tag { @apply bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold; }
+  </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
+<body class="bg-gray-50 font-sans text-gray-800">
 
-    <!-- Header -->
-    <header class="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Serviços Toledo</h1>
-        <button onclick="toggleTheme()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-            Alternar Tema
-        </button>
-    </header>
+ <!-- Header fixo -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="inline-flex h-8 w-8 rounded-xl bg-white"></span>
+        <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="prestadores.html"
+          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
+      </nav>
+      <button id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
+        <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
+      <div class="flex flex-col gap-3 font-semibold">
+        <a href="index.html" class="py-2 border-b text-white">Início</a>
+        <a href="contato.html" class="py-2 border-b text-white">Contato</a>
+        <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
+      </div>
+    </div>
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </header>
 
-    <!-- Perfil do Prestador -->
-    <main class="max-w-4xl mx-auto mt-10 p-4">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col md:flex-row items-center md:items-start gap-6 transition-transform transform hover:scale-105">
-            
-            <!-- Avatar -->
-            <img id="perfil-avatar" src="" alt="Foto do Prestador" class="w-40 h-40 rounded-full object-cover shadow-md">
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-8 mt-40 fade-in">
+    <div class="bg-white shadow-lg rounded-2xl p-8 md:p-10 card-hover">
 
-            <!-- Informações -->
-            <div class="flex-1 space-y-4">
-                <h2 id="perfil-nome" class="text-3xl font-bold"></h2>
-                <p id="perfil-servico" class="text-lg font-semibold text-blue-600 dark:text-blue-400"></p>
-                <p id="perfil-descricao" class="text-gray-700 dark:text-gray-300"></p>
+      <!-- Header: avatar e nome -->
+      <div class="flex flex-col md:flex-row items-center mb-6">
+        <div class="w-28 h-28 bg-gray-200 rounded-full mr-6 flex items-center justify-center text-4xl text-gray-500 mb-4 md:mb-0" id="providerAvatar">?</div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-bold" id="providerName"></h2>
+          <p class="text-gray-600" id="providerProfession"></p>
 
-                <div class="space-y-1">
-                    <p><span class="font-semibold">Email:</span> <span id="perfil-email"></span></p>
-                    <p><span class="font-semibold">Telefone:</span> <span id="perfil-telefone"></span></p>
-                </div>
+          <!-- Avaliação -->
+          <div class="flex items-center mt-2">
+            <span class="text-yellow-500" id="providerRating">★★★★★</span>
+            <span class="ml-2 text-gray-500" id="providerReviews">(0 avaliações)</span>
+          </div>
 
-                <a href="#contato" class="inline-block mt-4 px-6 py-3 bg-green-600 text-white font-semibold rounded hover:bg-green-700 transition">
-                    Solicitar Serviço
-                </a>
-            </div>
+          <!-- Tags de serviço -->
+          <div class="flex flex-wrap gap-2 mt-2" id="providerTags">
+            <!-- Tags serão inseridas via JS -->
+          </div>
         </div>
-    </main>
+      </div>
 
-    <!-- Contato rápido -->
-    <section id="contato" class="max-w-4xl mx-auto mt-10 p-4">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-            <h3 class="text-2xl font-bold mb-4">Entre em contato</h3>
-            <p>Email: contato@servicostoledo.com.br</p>
-            <p>Telefone: (35) 0000-0000</p>
-            <p>WhatsApp: (35) 9 0000-0000</p>
-        </div>
-    </section>
+      <!-- Contatos e info -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <p><span class="font-semibold">E-mail:</span> <span id="providerEmail"></span></p>
+        <p><span class="font-semibold">Telefone / WhatsApp:</span> <span id="providerPhone"></span></p>
+        <p><span class="font-semibold">Cidade:</span> <span id="providerCity"></span></p>
+        <p><span class="font-semibold">Bairros / Regiões atendidas:</span> <span id="providerAreas"></span></p>
+        <p><span class="font-semibold">Disponibilidade:</span> <span id="providerAvailability"></span></p>
+        <p><span class="font-semibold">Faixa de preço por hora:</span> <span id="providerHourlyRange"></span></p>
+        <p><span class="font-semibold">Aceita chamados de emergência:</span> <span id="providerEmergency"></span></p>
+      </div>
+
+      <!-- Bio -->
+      <div class="mb-6">
+        <h3 class="font-semibold mb-2">Descrição / Experiência:</h3>
+        <p class="text-gray-700" id="providerBio"></p>
+      </div>
+
+      <!-- Portfólio -->
+      <div class="mb-6">
+        <h3 class="font-semibold mb-2">Portfólio / Links:</h3>
+        <a href="#" id="providerPortfolio" class="text-blue-600 hover:underline" target="_blank"></a>
+      </div>
+
+      <!-- Botão de solicitação -->
+      <div class="text-center">
+        <form action="https://formspree.io/f/xdkdqeor" method="POST" class="inline-block">
+          <input type="hidden" name="prestador_nome" id="formName">
+          <input type="hidden" name="prestador_email" id="formEmail">
+          <input type="hidden" name="prestador_profissao" id="formProfession">
+          <button type="submit" class="btn-primary text-lg">Solicitar Serviço</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- JS para popular perfil -->
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return decodeURIComponent(urlParams.get(param) || '');
+    }
+
+    const name = getQueryParam('name');
+    const profession = getQueryParam('profession');
+    const email = getQueryParam('email');
+    const phone = getQueryParam('phone');
+    const city = getQueryParam('city');
+    const areas = getQueryParam('areas');
+    const availability = getQueryParam('availability');
+    const hourly_range = getQueryParam('hourly_range');
+    const emergency_ok = getQueryParam('emergency_ok');
+    const bio = getQueryParam('bio');
+    const portfolio = getQueryParam('portfolio');
+    const tags = getQueryParam('tags'); // ex: "Eletricista,Pintor,Encanador"
+    const rating = getQueryParam('rating') || '★★★★★';
+    const reviews = getQueryParam('reviews') || '(0 avaliações)';
+
+    document.getElementById('providerName').textContent = name;
+    document.getElementById('providerProfession').textContent = profession;
+    document.getElementById('providerEmail').textContent = email;
+    document.getElementById('providerPhone').textContent = phone;
+    document.getElementById('providerCity').textContent = city;
+    document.getElementById('providerAreas').textContent = areas;
+    document.getElementById('providerAvailability').textContent = availability;
+    document.getElementById('providerHourlyRange').textContent = hourly_range;
+    document.getElementById('providerEmergency').textContent = emergency_ok;
+    document.getElementById('providerBio').textContent = bio;
+    document.getElementById('providerRating').textContent = rating;
+    document.getElementById('providerReviews').textContent = reviews;
+
+    const portfolioEl = document.getElementById('providerPortfolio');
+    if(portfolio) { portfolioEl.textContent = portfolio; portfolioEl.href = portfolio; }
+    else { portfolioEl.textContent = 'Nenhum link fornecido'; portfolioEl.href = '#'; }
+
+    // Tags
+    const tagsContainer = document.getElementById('providerTags');
+    if(tags){
+      tags.split(',').forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'tag';
+        span.textContent = tag.trim();
+        tagsContainer.appendChild(span);
+      });
+    }
+
+    // Formulário hidden
+    document.getElementById('formName').value = name;
+    document.getElementById('formEmail').value = email;
+    document.getElementById('formProfession').value = profession;
+
+    // Avatar inicial
+    const avatarEl = document.getElementById('providerAvatar');
+    avatarEl.textContent = name ? name.charAt(0).toUpperCase() : '?';
+  </script>
 
 </body>
 </html>
