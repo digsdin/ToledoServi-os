@@ -1,139 +1,161 @@
-        <!DOCTYPE html>
-        <html lang="pt-BR">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Serviços Solicitados</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- PapaParse para tratar CSV corretamente -->
-        <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
-     crossorigin="anonymous"></script>
-        
-        <style>
-            .fade-in {
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços Solicitados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PapaParse para tratar CSV corretamente -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
+        crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17500892314"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17500892314');
+    </script>
+
+
+    <style>
+        .fade-in {
             animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
             }
-            @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-        </style>
-        </head>
-        <body class="bg-gray-100 text-gray-900">
-        <!-- Header fixo -->
-        <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
-            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header fixo -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
-        <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8">
-        <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
-      </a>
+                <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8">
+                <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
+            </a>
             <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
                 <a href="index.html" class="hover:text-white">Início</a>
                 <a href="contato.html" class="hover:text-white">Contato</a>
                 <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
                 <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
                 <a href="prestadores.html"
-                class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
+                    class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me
+                    cadastrar</a>
             </nav>
             <button id="menuBtn"
                 class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
                 <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                    <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
                 </svg>
             </button>
-            </div>
-            <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
             <div class="flex flex-col gap-3 font-semibold">
                 <a href="index.html" class="py-2 border-b text-white">Início</a>
                 <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
                 <a href="contato.html" class="py-2 border-b text-white">Contato</a>
                 <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
-                <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
+                <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me
+                    cadastrar</a>
 
             </div>
-            </div>
-            <script>
+        </div>
+        <script>
             const menuBtn = document.getElementById('menuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
             menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-            </script>
-        </header>
+        </script>
+    </header>
 
-        <main class="container mx-auto px-6 py-24">
-  <h2 class="text-3xl font-bold text-center mb-8">Lista de Serviços Solicitados</h2>
-  <h1 class="text-xl font-semibold text-center mb-8">Encontre o serviço que você precisa</h1>
-  <img src="images/logo.png" alt="Profissionais em Toledo" class="mx-auto mb-6 rounded-xl shadow-lg max-h-32 w-auto">
+    <main class="container mx-auto px-6 py-24">
+        <h2 class="text-3xl font-bold text-center mb-8">Lista de Serviços Solicitados</h2>
+        <h1 class="text-xl font-semibold text-center mb-8">Encontre o serviço que você precisa</h1>
+        <img src="images/logo.png" alt="Profissionais em Toledo"
+            class="mx-auto mb-6 rounded-xl shadow-lg max-h-32 w-auto">
 
-  <!-- Barra de busca e ordenação -->
-  <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">
-    <input id="searchInput" type="text" placeholder="Buscar por nome, serviço ou endereço..."
-      class="w-full md:w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
-    <select id="sortSelect"
-      class="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
-      <option value="recent">Mais recentes</option>
-      <option value="oldest">Mais antigos</option>
-    </select>
-  </div>
+        <!-- Barra de busca e ordenação -->
+        <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">
+            <input id="searchInput" type="text" placeholder="Buscar por nome, serviço ou endereço..."
+                class="w-full md:w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            <select id="sortSelect" class="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option value="recent">Mais recentes</option>
+                <option value="oldest">Mais antigos</option>
+            </select>
+        </div>
 
-  <!-- Loading -->
-  <p id="loadingMsg" class="text-center text-gray-500">Carregando serviços...</p>
+        <!-- Loading -->
+        <p id="loadingMsg" class="text-center text-gray-500">Carregando serviços...</p>
 
-  <!-- Container dos serviços -->
-  <div id="servicosContainer" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+        <!-- Container dos serviços -->
+        <div id="servicosContainer" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
 
-  <!-- Estado vazio -->
-  <p id="emptyMsg" class="text-center text-gray-500 hidden">Nenhum serviço encontrado.</p>
-</main>
+        <!-- Estado vazio -->
+        <p id="emptyMsg" class="text-center text-gray-500 hidden">Nenhum serviço encontrado.</p>
+    </main>
 
-<script>
-  const sheetCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTe4QVYs5vg-32hSClo1061Qswn7G7_X5EAlUgEY7Ru8urjayY02ygy50K_GEn8VBCk5qb0fbPdbMst/pub?output=csv";
+    <script>
+        const sheetCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTe4QVYs5vg-32hSClo1061Qswn7G7_X5EAlUgEY7Ru8urjayY02ygy50K_GEn8VBCk5qb0fbPdbMst/pub?output=csv";
 
-  let allServices = [];
+        let allServices = [];
 
-  fetch(sheetCSV)
-    .then(res => res.text())
-    .then(csv => {
-      Papa.parse(csv, {
-        header: true,
-        skipEmptyLines: true,
-        complete: function(results) {
-          allServices = results.data;
-          document.getElementById("loadingMsg").classList.add("hidden");
-          renderServices(allServices);
-        }
-      });
-    })
-    .catch(err => {
-      console.error("Erro ao carregar CSV:", err);
-      document.getElementById("loadingMsg").innerText = "Erro ao carregar serviços.";
-    });
+        fetch(sheetCSV)
+            .then(res => res.text())
+            .then(csv => {
+                Papa.parse(csv, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: function (results) {
+                        allServices = results.data;
+                        document.getElementById("loadingMsg").classList.add("hidden");
+                        renderServices(allServices);
+                    }
+                });
+            })
+            .catch(err => {
+                console.error("Erro ao carregar CSV:", err);
+                document.getElementById("loadingMsg").innerText = "Erro ao carregar serviços.";
+            });
 
-  function renderServices(data) {
-    const container = document.getElementById("servicosContainer");
-    container.innerHTML = "";
-    const emptyMsg = document.getElementById("emptyMsg");
+        function renderServices(data) {
+            const container = document.getElementById("servicosContainer");
+            container.innerHTML = "";
+            const emptyMsg = document.getElementById("emptyMsg");
 
-    if (data.length === 0) {
-      emptyMsg.classList.remove("hidden");
-      return;
-    } else {
-      emptyMsg.classList.add("hidden");
-    }
+            if (data.length === 0) {
+                emptyMsg.classList.remove("hidden");
+                return;
+            } else {
+                emptyMsg.classList.add("hidden");
+            }
 
-    const fragment = document.createDocumentFragment();
+            const fragment = document.createDocumentFragment();
 
-    data.forEach(row => {
-      const timestamp = row["Carimbo de data/hora"] || "-";
-      const nome = row["Nome"] || "-";
-      const telefone = row["Telefone"] || row["Whatsapp"] || "-";
-      const servico = row["Serviço"] || row["Tipo de serviço"] || "-";
-      const descricao = row["Descrição"] || row["  Descrição do problema  "] || "";
-      const endereco = row["Endereço"] || "Toledo - MG";
+            data.forEach(row => {
+                const timestamp = row["Carimbo de data/hora"] || "-";
+                const nome = row["Nome"] || "-";
+                const telefone = row["Telefone"] || row["Whatsapp"] || "-";
+                const servico = row["Serviço"] || row["Tipo de serviço"] || "-";
+                const descricao = row["Descrição"] || row["  Descrição do problema  "] || "";
+                const endereco = row["Endereço"] || "Toledo - MG";
 
-      const card = document.createElement("div");
-      card.className = "bg-white rounded-xl shadow-lg p-6 fade-in";
-      card.innerHTML = `
+                const card = document.createElement("div");
+                card.className = "bg-white rounded-xl shadow-lg p-6 fade-in";
+                card.innerHTML = `
         <h3 class="text-xl font-semibold mb-2 text-blue-600 text-center">${servico}</h3>
         <p><span class="font-bold">Nome:</span> ${nome}</p>
         <p class="mt-2"><span class="font-bold">Descrição:</span> ${descricao}</p>
@@ -143,57 +165,59 @@
         <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}"
           target="_blank" class="text-blue-500 hover:underline mt-2 block">Ver no mapa</a>
       `;
-      fragment.appendChild(card);
-    });
+                fragment.appendChild(card);
+            });
 
-    container.appendChild(fragment);
-  }
+            container.appendChild(fragment);
+        }
 
-  // 🔎 Busca
-  document.getElementById("searchInput").addEventListener("input", (e) => {
-    const term = e.target.value.toLowerCase();
-    const filtered = allServices.filter(row =>
-      (row["Nome"] || "").toLowerCase().includes(term) ||
-      (row["Serviço"] || "").toLowerCase().includes(term) ||
-      (row["Endereço"] || "").toLowerCase().includes(term)
-    );
-    renderServices(filtered);
-  });
+        // 🔎 Busca
+        document.getElementById("searchInput").addEventListener("input", (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = allServices.filter(row =>
+                (row["Nome"] || "").toLowerCase().includes(term) ||
+                (row["Serviço"] || "").toLowerCase().includes(term) ||
+                (row["Endereço"] || "").toLowerCase().includes(term)
+            );
+            renderServices(filtered);
+        });
 
-  // ↕️ Ordenação
-  document.getElementById("sortSelect").addEventListener("change", (e) => {
-    let sorted = [...allServices];
-    if (e.target.value === "recent") {
-      sorted.sort((a, b) => new Date(b["Carimbo de data/hora"]) - new Date(a["Carimbo de data/hora"]));
-    } else {
-      sorted.sort((a, b) => new Date(a["Carimbo de data/hora"]) - new Date(b["Carimbo de data/hora"]));
-    }
-    renderServices(sorted);
-  });
-</script>
+        // ↕️ Ordenação
+        document.getElementById("sortSelect").addEventListener("change", (e) => {
+            let sorted = [...allServices];
+            if (e.target.value === "recent") {
+                sorted.sort((a, b) => new Date(b["Carimbo de data/hora"]) - new Date(a["Carimbo de data/hora"]));
+            } else {
+                sorted.sort((a, b) => new Date(a["Carimbo de data/hora"]) - new Date(b["Carimbo de data/hora"]));
+            }
+            renderServices(sorted);
+        });
+    </script>
 
-         <!-- Rodapé -->
-  <footer class="border-t bg-white">
-    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
-      <div>
-        <h4 class="font-bold text-lg mb-2">ServiçosToledo</h4>
-        <p class="text-gray-600 text-sm">Conectamos clientes a profissionais confiáveis em Toledo — MG.</p>
-      </div>
-      <div>
-        <h4 class="font-bold text-lg mb-2">Links</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:text-blue-600" href="index.html">Início</a></li>
-          <li><a class="hover:text-blue-600" href="prestadores.html">Prestadores</a></li>
-          <li><a class="hover:text-blue-600" href="contato.html">Contato</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold text-lg mb-2">Contato</h4>
-        <p class="text-sm text-gray-600">Toledo — MG • contato@servicostoledo.com.br</p>
-      </div>
-    </div>
-    <div class="text-center text-xs text-gray-500 py-4 border-t">© 2025 ServiçosToledo. Todos os direitos reservados.
-    </div>
-  </footer>
-        </body>
-        </html>
+    <!-- Rodapé -->
+    <footer class="border-t bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="font-bold text-lg mb-2">ServiçosToledo</h4>
+                <p class="text-gray-600 text-sm">Conectamos clientes a profissionais confiáveis em Toledo — MG.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a class="hover:text-blue-600" href="index.html">Início</a></li>
+                    <li><a class="hover:text-blue-600" href="prestadores.html">Prestadores</a></li>
+                    <li><a class="hover:text-blue-600" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-2">Contato</h4>
+                <p class="text-sm text-gray-600">Toledo — MG • contato@servicostoledo.com.br</p>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 py-4 border-t">© 2025 ServiçosToledo. Todos os direitos
+            reservados.
+        </div>
+    </footer>
+</body>
+
+</html>
