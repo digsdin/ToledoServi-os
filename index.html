@@ -24,6 +24,22 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+        /* Adicione estas novas regras para o logo */
+        .logo-container {
+            text-align: center;
+            padding: 10px 0; /* Adiciona um pequeno espaçamento */
+        }
+
+        .logo-img {
+            max-height: 80px; /* Você pode ajustar este tamanho */
+            width: auto;
+        }
+
+        /* Ajuste para remover a formatação de texto do header antigo */
+        header h1, header p {
+            display: none; /* Esconde o texto antigo do cabeçalho */
+        }
   </style>
 </head>
 
@@ -32,9 +48,10 @@
 
   <!-- Header fixo -->
   <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
+    
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
-        <span class="inline-flex h-8 w-8 rounded-xl bg-white"></span>
+        <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8">
         <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
