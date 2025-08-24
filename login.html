@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Toledo Service</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-800 to-blue-500">
+    <!-- Header fixo -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8">
+        <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
+        <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
+        <a href="prestadores.html"
+          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
+      <a href="login.html" class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+        Entrar
+      </a>
+      </nav>
+      <button id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
+        <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
+      <div class="flex flex-col gap-3 font-semibold">
+        <a href="index.html" class="py-2 border-b text-white">Início</a>
+        <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
+        <a href="contato.html" class="py-2 border-b text-white">Contato</a>
+        <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
+         <a href="login.html" class="px-4 py-2 bg-green-600 text-white text-center rounded-lg shadow hover:bg-green-700 transition">
+        Entrar
+      </a>
+        <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
+
+      </div>
+    </div>
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+    
+  </header>
+  <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md text-center">
+    <!-- Logo / Nome -->
+    <h1 class="text-3xl font-extrabold mb-6 text-gray-800">Toledo Service</h1>
+    <p class="text-gray-600 mb-6">Entre com sua conta Google para continuar</p>
+    
+    <!-- Container do botão do Google -->
+    <div id="g_id_onload"
+         data-client_id="857188544714-i3qunn9vkjna8r3cg22nruet2pt41oc0.apps.googleusercontent.com"
+         data-context="signin"
+         data-ux_mode="popup"
+         data-callback="handleCredentialResponse"
+         data-auto_select="false">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard"
+         data-shape="rectangular"
+         data-theme="outline"
+         data-text="signin_with"
+         data-size="large"
+         data-logo_alignment="left">
+    </div>
+
+    <!-- Link de retorno -->
+    <p class="mt-6 text-sm text-gray-500">
+      <a href="index.html" class="text-green-600 hover:underline">← Voltar ao site</a>
+    </p>
+  </div>
+
+  <script>
+    // Callback quando o login for concluído
+    function handleCredentialResponse(response) {
+      console.log("JWT Token recebido:", response.credential);
+      // Aqui você pode enviar o token para o backend validar
+      alert("Login com Google realizado com sucesso!");
+    }
+  </script>
+</body>
+</html>
