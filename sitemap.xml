@@ -1,11 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página inicial -->
   <url>
     <loc>https://toledoservice.com.br/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Páginas institucionais -->
   <url>
-    <loc>https://toledoservice.com.br/servicos</loc>
+    <loc>https://toledoservice.com.br/como-funciona/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://toledoservice.com.br/contato/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/quero-me-cadastrar/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/politica-de-privacidade/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/termos-de-uso/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Busca de profissionais -->
+  <url>
+    <loc>https://toledoservice.com.br/buscar-prestador/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Categorias de serviços -->
+  <url>
+    <loc>https://toledoservice.com.br/servicos/eletricista/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/encanador/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/pintor/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/pedreiro/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/carreto-transporte-mudancas/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/entregadores-motoboy/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/montador-de-moveis/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página inicial -->
+  <url>
+    <loc>https://toledoservice.com.br/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Páginas institucionais -->
+  <url>
+    <loc>https://toledoservice.com.br/como-funciona/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/contato/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/quero-me-cadastrar/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/politica-de-privacidade/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/termos-de-uso/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Busca de profissionais -->
+  <url>
+    <loc>https://toledoservice.com.br/buscar-prestador/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Categorias de serviços -->
+  <url>
+    <loc>https://toledoservice.com.br/servicos/eletricista/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/encanador/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/pintor/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/pedreiro/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/carreto-transporte-mudancas/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/entregadores-motoboy/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://toledoservice.com.br/servicos/montador-de-moveis/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
