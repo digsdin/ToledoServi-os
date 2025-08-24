@@ -74,51 +74,136 @@
 
 
   <!-- Header fixo -->
-  <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
+<header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8">
+      <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
+    </a>
 
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8">
-        <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
+    <!-- Menu Desktop -->
+    <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
+      <a href="index.html" class="hover:text-white">Início</a>
+      <a href="contato.html" class="hover:text-white">Contato</a>
+      <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
+      <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
+      <a href="prestadores.html"
+         class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+        Quero me cadastrar
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
-        <a href="index.html" class="hover:text-white">Início</a>
-        <a href="contato.html" class="hover:text-white">Contato</a>
-        <a href="buscaprestador.html" class="hover:text-white">Buscar Prestador</a>
-        <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
-        <a href="prestadores.html"
-          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">Quero me cadastrar</a>
-      <a href="login.html" class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-        Entrar
-      </a>
-      </nav>
-      <button id="menuBtn"
-        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
-        <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
-        </svg>
-      </button>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
-      <div class="flex flex-col gap-3 font-semibold">
-        <a href="index.html" class="py-2 border-b text-white">Início</a>
-        <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
-        <a href="contato.html" class="py-2 border-b text-white">Contato</a>
-        <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
-         <a href="login.html" class="px-4 py-2 bg-green-600 text-white text-center rounded-lg shadow hover:bg-green-700 transition">
-        Entrar
-      </a>
-        <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
 
+      <!-- Auth Section -->
+      <div id="auth-desktop" class="flex items-center space-x-4">
+        <!-- Botão login -->
+        <a id="login-btn-desktop" href="login.html" 
+           class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+          Entrar
+        </a>
+        <!-- Info do usuário -->
+        <div id="user-info-desktop" class="hidden items-center space-x-3">
+          <img id="user-pic-desktop" class="w-8 h-8 rounded-full border" alt="User">
+          <span id="user-name-desktop" class="text-white font-semibold"></span>
+          <button id="logout-btn-desktop" 
+            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
+            Sair
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Botão menu mobile -->
+    <button id="menuBtn"
+      class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
+      <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
+    <div class="flex flex-col gap-3 font-semibold">
+      <a href="index.html" class="py-2 border-b text-white">Início</a>
+      <a href="buscaprestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
+      <a href="contato.html" class="py-2 border-b text-white">Contato</a>
+      <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
+      <a href="prestadores.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
+
+      <!-- Auth Section Mobile -->
+      <div id="auth-mobile" class="flex items-center space-x-4">
+        <a id="login-btn-mobile" href="login.html" 
+           class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition w-full text-center">
+          Entrar
+        </a>
+        <div id="user-info-mobile" class="hidden items-center space-x-3 w-full justify-between">
+          <div class="flex items-center gap-2">
+            <img id="user-pic-mobile" class="w-8 h-8 rounded-full border" alt="User">
+            <span id="user-name-mobile" class="text-white font-semibold"></span>
+          </div>
+          <button id="logout-btn-mobile" 
+            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
+            Sair
+          </button>
+        </div>
       </div>
     </div>
-    <script>
-      const menuBtn = document.getElementById('menuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-    </script>
-    
-  </header>
+  </div>
+</header>
+
+<script>
+  // Controle do menu mobile
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => { 
+    mobileMenu.classList.toggle('hidden'); 
+  });
+
+  // Função para carregar usuário
+  function loadUser() {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    // Desktop
+    const loginBtnDesktop = document.getElementById("login-btn-desktop");
+    const userInfoDesktop = document.getElementById("user-info-desktop");
+    const userNameDesktop = document.getElementById("user-name-desktop");
+    const userPicDesktop = document.getElementById("user-pic-desktop");
+    const logoutBtnDesktop = document.getElementById("logout-btn-desktop");
+
+    // Mobile
+    const loginBtnMobile = document.getElementById("login-btn-mobile");
+    const userInfoMobile = document.getElementById("user-info-mobile");
+    const userNameMobile = document.getElementById("user-name-mobile");
+    const userPicMobile = document.getElementById("user-pic-mobile");
+    const logoutBtnMobile = document.getElementById("logout-btn-mobile");
+
+    if (user) {
+      // Mostrar infos
+      loginBtnDesktop.classList.add("hidden");
+      userInfoDesktop.classList.remove("hidden");
+      userNameDesktop.textContent = user.name;
+      userPicDesktop.src = user.picture;
+
+      loginBtnMobile.classList.add("hidden");
+      userInfoMobile.classList.remove("hidden");
+      userNameMobile.textContent = user.name;
+      userPicMobile.src = user.picture;
+
+      // Logout
+      logoutBtnDesktop.addEventListener("click", () => {
+        localStorage.removeItem("user");
+        window.location.reload();
+      });
+      logoutBtnMobile.addEventListener("click", () => {
+        localStorage.removeItem("user");
+        window.location.reload();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadUser);
+</script>
+
+
 
   <!-- Hero Section -->
   <section class="pt-32 pb-20 bg-gradient-to-r from-gray-800 to-blue-400 text-white text-center">
@@ -308,6 +393,33 @@
 
     fadeEls.forEach(el => observer.observe(el));
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (user) {
+      // Substitui botão Entrar pelo avatar + nome
+      const loginBtn = document.getElementById("login-btn");
+      if (loginBtn) {
+        loginBtn.innerHTML = `
+          <div class="flex items-center space-x-2 cursor-pointer">
+            <img src="${user.picture}" class="w-8 h-8 rounded-full border" alt="Avatar">
+            <span class="text-gray-700 font-medium">${user.name.split(" ")[0]}</span>
+            <button onclick="logout()" class="ml-2 px-2 py-1 text-xs bg-red-500 text-white rounded hover:bg-red-600">Sair</button>
+          </div>
+        `;
+      }
+    }
+  });
+
+  // Função de logout
+  function logout() {
+    localStorage.removeItem("user");
+    window.location.reload();
+  }
+</script>
+
+  
 
 </body>
 
