@@ -1,0 +1,28 @@
+# robots.txt - Serviços Toledo
+# Bloqueia áreas administrativas e arquivos sensíveis
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cadastro-profissional-temp/
+Disallow: /scripts/
+Disallow: /config/
+Disallow: /uploads-temp/
+Disallow: /private/
+Disallow: /backup/
+Disallow: /*.sql$
+Disallow: /*.zip$
+Disallow: /*.bak$
+
+# Permite acesso completo ao restante do site
+Allow: / 
+Allow: /index.html
+Allow: /busca-profissionais/
+Allow: /servicos/
+Allow: /contato/
+Allow: /sobre/
+
+# Sitemap para otimização de indexação
+Sitemap: https://toledoservice.com.br/sitemap.xml
+
+# Crawl-delay opcional para evitar sobrecarga do servidor
+Crawl-delay: 10
