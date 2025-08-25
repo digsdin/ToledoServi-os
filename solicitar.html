@@ -40,6 +40,23 @@
     gtag('config', 'AW-17500892314');
     gtag('event', 'conversion', { 'send_to': 'AW-17500892314/iEPWCPaH44sbEJrZiZlB' });
   </script>
+  <!-- Event snippet for Visualização de página conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17500892314/iEPWCPaH44sbEJrZiZlB',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 
 
   <style>
@@ -346,79 +363,81 @@
 </style>
 
 <footer style="background-color: var(--md-sys-color-surface-container);">
-  <svg class="absolute w-0 h-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <symbol id="icon-facebook" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
-    </symbol>
-    <symbol id="icon-instagram" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M2 6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6zm4-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6zm6 4a4 4 0 1 1 0 8a4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4zm5-3a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/>
-    </symbol>
-    <symbol id="icon-linkedin" viewBox="0 0 24 24">
-       <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-12 5v10h3V11h-3zM8.5 6.5A1.5 1.5 0 1 0 7 8a1.5 1.5 0 0 0 1.5-1.5zM18 18h-3v-4.5c0-1.4-.8-2.5-2-2.5s-2 1.1-2 2.5V18h-3V11h3v1.5c.5-1 1.5-1.5 2.5-1.5s2.5 1 2.5 4.5V18z"/>
-    </symbol>
-    <symbol id="icon-x-twitter" viewBox="0 0 24 24">
-       <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </symbol>
-  </svg>
-  
-  <div class="max-w-7xl mx-auto px-6 py-16">
-    <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 text-center md:text-left">
-      <div class="lg:col-span-2 space-y-3">
-        <h3 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">ServiçosToledo</h3>
-        <p class="m3-body-medium">
-          Conectando você aos melhores prestadores de serviços em Toledo - MG.
-        </p>
-      </div>
+      <svg class="absolute w-0 h-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="icon-facebook" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M2 6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6zm4-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6zm6 4a4 4 0 1 1 0 8a4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4zm5-3a1 1 0 1 1 0 2a1 1 0 0 1 0-2z" />
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-12 5v10h3V11h-3zM8.5 6.5A1.5 1.5 0 1 0 7 8a1.5 1.5 0 0 0 1.5-1.5zM18 18h-3v-4.5c0-1.4-.8-2.5-2-2.5s-2 1.1-2 2.5V18h-3V11h3v1.5c.5-1 1.5-1.5 2.5-1.5s2.5 1 2.5 4.5V18z" />
+        </symbol>
+        <symbol id="icon-x-twitter" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </symbol>
+      </svg>
 
-      <div class="space-y-4">
-        <h4 class="m3-title-medium">Navegação</h4>
-        <ul class="space-y-2">
-          <li><a href="index.html" class="m3-footer-link">Início</a></li>
-          <li><a href="buscar-prestador.html" class="m3-footer-link">Buscar Prestador</a></li>
-          <li><a href="solicitar.html" class="m3-footer-link">Solicitar Serviço</a></li>
-          <li><a href="quero-me-cadastrar.html" class="m3-footer-link">Quero me cadastrar</a></li>
-        </ul>
-      </div>
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 text-center md:text-left">
+          <div class="lg:col-span-2 space-y-3">
+            <h3 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">ServiçosToledo</h3>
+            <p class="m3-body-medium">
+              Conectando você aos melhores prestadores de serviços em Toledo - MG.
+            </p>
+          </div>
 
-      <div class="space-y-4">
-        <h4 class="m3-title-medium">Suporte</h4>
-        <ul class="space-y-2">
-          <li><a href="/contato.html" class="m3-footer-link">Fale Conosco</a></li>
-        </ul>
-      </div>
+          <div class="space-y-4">
+            <h4 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">Navegação</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="m3-footer-link">Início</a></li>
+              <li><a href="buscar-prestador.html" class="m3-footer-link">Buscar Prestador</a></li>
+              <li><a href="solicitar.html" class="m3-footer-link">Solicitar Serviço</a></li>
+              <li><a href="quero-me-cadastrar.html" class="m3-footer-link">Quero me cadastrar</a></li>
+            </ul>
+          </div>
 
-      <div class="space-y-4">
-        <h4 class="m3-title-medium">Redes Sociais</h4>
-        <div class="flex gap-2 justify-center md:justify-start">
-          <a href="#" class="m3-icon-button" aria-label="Facebook">
-  <svg class="w-6 h-6" viewBox="0 0 24 24">
-    <path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
-  </svg>
-</a>
+          <div class="space-y-4">
+            <h4 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">Suporte</h4>
+            <ul class="space-y-2">
+              <li><a href="/contato.html" class="m3-footer-link">Fale Conosco</a></li>
+              <li><a href="https://digs-portifolio.netlify.app/" class="m3-footer-link">Meu Portfólio</a></li>
+            </ul>
+          </div>
 
-          <a href="https://www.instagram.com/toledoservices/" class="m3-icon-button" aria-label="Instagram">
-            <svg class="w-6 h-6" aria-hidden="true"><use xlink:href="#icon-instagram" /></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/diego-lima-da-silva-b068b2112" class="m3-icon-button" aria-label="LinkedIn">
-            <svg class="w-6 h-6" aria-hidden="true"><use xlink:href="#icon-linkedin" /></svg>
-          </a>
-          <a href="#" class="m3-icon-button" aria-label="Twitter">
-            <svg class="w-6 h-6" aria-hidden="true"><use xlink:href="#icon-x-twitter" /></svg>
-          </a>
+          <div class="space-y-4">
+            <h4 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">Redes Sociais</h4>
+            <div class="flex gap-2 justify-center md:justify-start">
+              <a href="https://www.instagram.com/toledoservices/" class="m3-icon-button" aria-label="Instagram">
+                <svg class="w-6 h-6" aria-hidden="true">
+                  <use xlink:href="#icon-instagram" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/diego-lima-da-silva-b068b2112" class="m3-icon-button"
+                aria-label="LinkedIn">
+                <svg class="w-6 h-6" aria-hidden="true">
+                  <use xlink:href="#icon-linkedin" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="m3-border-color-outline">
+          <p>
+            Desenvolvido por &copy; <span class="font-semibold text-[var(--md-sys-color-on-surface)]">DIGSWARE</span>
+            <span id="current-year"></span>. Todos os direitos reservados.
+          </p>
         </div>
       </div>
-    </div>
-
-    <div class="m3-border-color-outline">
-      <p>
-        Desenvolvido por &copy; <span class="font-semibold text-[var(--md-sys-color-on-surface)]">DIGSWARE</span> <span id="current-year"></span>. Todos os direitos reservados.
-      </p>
-    </div>
-  </div>
-<script>
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
-</footer>
+      <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
 
 
 </body>
