@@ -2,36 +2,37 @@
 <html lang="pt-BR">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z56W62B846"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z56W62B846"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-Z56W62B846');
+  </script>
 
-  gtag('config', 'G-Z56W62B846');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serviços Toledo | Reforma, Construção e Manutenção</title>
-  <meta name="description"
-    content="Serviços Toledo - sua solução em reformas, construções e manutenção em Toledo. Atendimento rápido e profissional.">
-  <meta property="og:title" content="Serviços Toledo">
-  <meta property="og:description" content="Reformas, construções e manutenção em Toledo.">
+  <title>Solicitar Serviço | Serviços Toledo</title>
+  <meta name="description" content="Preencha o formulário para solicitar um serviço de reforma, construção ou manutenção em Toledo.">
+
+  <meta property="og:title" content="Solicitar Serviço | Serviços Toledo">
+  <meta property="og:description" content="Sua solução em reformas, construções e manutenção em Toledo.">
   <meta property="og:image" content="https://toledoservice.com.br/logo.png">
-  <meta property="og:url" content="https://toledoservice.com.br">
+  <meta property="og:url" content="https://toledoservice.com.br/solicitar.html">
   <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" href="images/favicon.jpg">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="images/site.webmanifest">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
-    crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
+  
+  <link rel="stylesheet" href="style-md3.css">
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17500892314"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -39,406 +40,423 @@
     gtag('js', new Date());
     gtag('config', 'AW-17500892314');
     gtag('event', 'conversion', { 'send_to': 'AW-17500892314/iEPWCPaH44sbEJrZiZlB' });
-  </script>
-  <!-- Event snippet for Visualização de página conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17500892314/iEPWCPaH44sbEJrZiZlB',
+        'event_callback': callback
+      });
+      return false;
     }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17500892314/iEPWCPaH44sbEJrZiZlB',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+  </script>
+  <style>
+   /* Define a paleta de cores do Material Design 3 como CSS Variables */
+      :root {
+        --md-sys-color-primary: #346094;
+        /* Um azul como cor primária */
+        --md-sys-color-on-primary: #17171d;
+        --md-sys-color-surface-container: #222020;
+        /* Fundo principal, um cinza bem claro */
+        --md-sys-color-on-surface: #1A1C1E;
+        /* Cor do texto principal */
+        --md-sys-color-on-surface-variant: #43474E;
+        /* Cor do texto secundário e ícones */
+        --md-sys-color-outline: #74777F;
+      }
 
+      /* Define classes de componentes reutilizáveis sem @apply */
+      .m3-title-medium {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .009375em;
+        color: var(--md-sys-color-on-surface);
+      }
 
+      .m3-border-color-outline {
+        border-top: 1px solid var(--md-sys-color-outline);
+        margin-top: 3rem;
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--md-sys-color-on-surface-variant);
+      }
+
+      .m3-body-medium {
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--md-sys-color-on-surface-variant);
+      }
+
+      .m3-label-large {
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        color: var(--md-sys-color-primary);
+      }
+
+      .m3-footer-link {
+        position: relative;
+        border-radius: 0.375rem;
+        padding: 0.25rem 0.5rem;
+        color: var(--md-sys-color-on-surface-variant);
+        transition: color 0.2s;
+        outline: none;
+      }
+
+      .m3-footer-link:hover,
+      .m3-footer-link:focus-visible {
+        color: var(--md-sys-color-primary);
+        background-color: #DBEAFE;
+        /* blue-100 */
+      }
+
+      .m3-icon-button {
+        position: relative;
+        display: flex;
+        height: 2.5rem;
+        width: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        color: var(--md-sys-color-on-surface-variant);
+        transition: background-color 0.2s, color 0.2s;
+        outline: none;
+      }
+
+      .m3-icon-button:hover,
+      .m3-icon-button:focus-visible {
+        background-color: #DBEAFE;
+        /* blue-100 */
+        color: var(--md-sys-color-primary);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --md-sys-color-primary: #8AB4F8;
+          --md-sys-color-on-primary: #000000;
+          --md-sys-color-surface-container: #1A1C1E;
+          --md-sys-color-on-surface: #E1E2E5;
+          --md-sys-color-on-surface-variant: #C1C4C9;
+          --md-sys-color-outline: #5C5F66;
+        }
+
+        .m3-border-color-outline {
+          border-top-color: var(--md-sys-color-outline);
+          color: var(--md-sys-color-on-surface-variant);
+        }
+
+        .m3-footer-link {
+          &:hover {
+            background-color: #DBEAFE;
+            /* blue-100 */
+            color: var(--md-sys-color-primary);
+          }
+
+          &:focus-visible {
+            outline: none;
+            background-color: #DBEAFE;
+            /* blue-100 */
+            color: var(--md-sys-color-primary);
+          }
+        }
+
+        .m3-icon-button {
+          &:hover {
+            background-color: #3B82F6;
+            /* blue-500 */
+            color: var(--md-sys-color-on-primary);
+          }
+
+          &:focus-visible {
+            outline: none;
+            background-color: #3B82F6;
+            /* blue-500 */
+            color: var(--md-sys-color-on-primary);
+          }
+        }
+      }
+    </style>
+    
+</head>
+
+<body>
 
   <style>
+    :root {
+      --color-background: #0D1117;
+      --color-surface: #161B22;
+      --color-primary: #3882F6;
+      --color-primary-hover: #60A5FA;
+      --color-text-primary: #E6EDF3;
+      --color-text-secondary: #8B949E;
+      --color-border: #30363D;
+      --color-success: #2DA44E;
+      --color-danger: #CF222E;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text-primary);
     }
 
-    .fade-in {
+    .fade-in-item {
       opacity: 0;
       transform: translateY(20px);
-      transition: all 0.8s ease;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
+    .text-gradient {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
 
-    /* Adicione estas novas regras para o logo */
-    .logo-container {
+    .card-style {
+      position: relative;
+      background: var(--color-surface);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      transition: all 0.3s ease;
+    }
+
+    .card-style:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 20px rgba(56, 130, 246, 0.2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
       text-align: center;
-      padding: 10px 0;
-      /* Adiciona um pequeno espaçamento */
+      transition: all 0.2s ease-out;
     }
 
-    .logo-img {
-      max-height: 80px;
-      /* Você pode ajustar este tamanho */
-      width: auto;
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: white;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
-    /* Ajuste para remover a formatação de texto do header antigo */
-    header h1,
-    header p {
-      display: none;
-      /* Esconde o texto antigo do cabeçalho */
+    .btn-primary:hover {
+      background-color: var(--color-primary-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-text-primary);
+    }
+
+    .icon-white {
+      filter: invert(1);
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-<!-- Header fixo -->
-  <!-- Header fixo -->
-<header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8">
-      <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
-    </a>
+<body class="antialiased">
 
-    <!-- Menu Desktop -->
-    <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
-      <a href="index.html" class="hover:text-white">Início</a>
-      <a href="contato.html" class="hover:text-white">Contato</a>
-      <a href="buscar-prestador.html" class="hover:text-white">Buscar Prestador</a>
-      <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
-      <a href="quero-me-cadastrar.html"
-         class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-        Quero me cadastrar
+  <div class="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[150%] sm:w-[100%] sm:h-[100%]"
+      style="background: radial-gradient(circle, rgba(56,130,246,0.15) 0%, transparent 70%);"></div>
+  </div>
+  <!-- Header -->
+  <header id="main-header"
+    class="fixed top-0 inset-x-0 z-50 transition-all duration-300 backdrop-blur-lg border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8 w-auto">
+        <span class="text-xl font-bold tracking-tight text-white">Serviços Toledo</span>
       </a>
 
-      <!-- Auth Section -->
-      <div id="auth-desktop" class="flex items-center space-x-4">
-        <!-- Botão login -->
-        <a id="login-btn-desktop" href="login.html" 
-           class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-          Entrar
+      <nav class="hidden md:flex items-center gap-2 font-semibold text-gray-300">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="buscar-prestador.html" class="hover:text-white">Profissionais</a>
+        <a href="servicos.html" class="hover:text-white">Serviços</a>
+        <a href="quero-me-cadastrar.html"
+          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+          Quero me cadastrar
         </a>
-        <!-- Info do usuário -->
-        <div id="user-info-desktop" class="hidden items-center space-x-3">
-          <img id="user-pic-desktop" class="w-8 h-8 rounded-full border" alt="User">
-          <span id="user-name-desktop" class="text-white font-semibold"></span>
-          <button id="logout-btn-desktop" 
-            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
-            Sair
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Botão menu mobile -->
-    <button id="menuBtn"
-      class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
-      <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Menu Mobile -->
-  <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
-    <div class="flex flex-col gap-3 font-semibold">
-      <a href="index.html" class="py-2 border-b text-white">Início</a>
-      <a href="buscar-prestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
-      <a href="contato.html" class="py-2 border-b text-white">Contato</a>
-      <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
-      <a href="quero-me-cadastrar.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
-
-      <!-- Auth Section Mobile -->
-      <div id="auth-mobile" class="flex items-center space-x-4">
-        <a id="login-btn-mobile" href="login.html" 
-           class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition w-full text-center">
-          Entrar
-        </a>
-        <div id="user-info-mobile" class="hidden items-center space-x-3 w-full justify-between">
-          <div class="flex items-center gap-2">
-            <img id="user-pic-mobile" class="w-8 h-8 rounded-full border" alt="User">
-            <span id="user-name-mobile" class="text-white font-semibold"></span>
+        <div id="auth-desktop" class="flex items-center gap-2 ml-4">
+          <a id="login-btn-desktop" href="login.html" class="btn btn-secondary"
+            style="background-color: var(--color-success); border-color: transparent;">Entrar</a>
+          <div id="user-info-desktop" class="hidden items-center gap-3">
+            <img id="user-pic-desktop" class="w-8 h-8 rounded-full" alt="User">
+            <span id="user-name-desktop" class="text-white font-semibold"></span>
+            <button id="logout-btn-desktop" class="btn text-xs"
+              style="background-color: var(--color-danger);">Sair</button>
           </div>
-          <button id="logout-btn-mobile" 
-            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
-            Sair
-          </button>
+        </div>
+      </nav>
+
+      <button id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-gray-700 text-gray-300">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 backdrop-blur-xl"
+      style="background-color: rgba(13, 17, 23, 0.9);">
+      <div class="flex flex-col gap-4 font-semibold text-gray-300 border-t border-gray-700 pt-4">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="buscar-prestador.html" class="hover:text-white">Profissionais</a>
+        <a href="servicos.html" class="hover:text-white">Serviços</a>
+
+        <div id="auth-mobile">
+          <a id="login-btn-mobile" href="login.html" class="btn btn-secondary w-full mt-2"
+            style="background-color: var(--color-success); border-color: transparent;">Entrar</a>
+          <div id="user-info-mobile" class="hidden items-center justify-between mt-2">
+            <div class="flex items-center gap-2">
+              <img id="user-pic-mobile" class="w-8 h-8 rounded-full" alt="User">
+              <span id="user-name-mobile" class="text-white font-semibold"></span>
+            </div>
+            <button id="logout-btn-mobile" class="btn text-xs"
+              style="background-color: var(--color-danger);">Sair</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
 
-<script>
-  // Controle do menu mobile
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => { 
-    mobileMenu.classList.toggle('hidden'); 
-  });
-
-  // Função para carregar usuário
-  function loadUser() {
-    const user = JSON.parse(localStorage.getItem("user"));
-
-    // Desktop
-    const loginBtnDesktop = document.getElementById("login-btn-desktop");
-    const userInfoDesktop = document.getElementById("user-info-desktop");
-    const userNameDesktop = document.getElementById("user-name-desktop");
-    const userPicDesktop = document.getElementById("user-pic-desktop");
-    const logoutBtnDesktop = document.getElementById("logout-btn-desktop");
-
-    // Mobile
-    const loginBtnMobile = document.getElementById("login-btn-mobile");
-    const userInfoMobile = document.getElementById("user-info-mobile");
-    const userNameMobile = document.getElementById("user-name-mobile");
-    const userPicMobile = document.getElementById("user-pic-mobile");
-    const logoutBtnMobile = document.getElementById("logout-btn-mobile");
-
-    if (user) {
-      // Mostrar infos
-      loginBtnDesktop.classList.add("hidden");
-      userInfoDesktop.classList.remove("hidden");
-      userNameDesktop.textContent = user.name;
-      userPicDesktop.src = user.picture;
-
-      loginBtnMobile.classList.add("hidden");
-      userInfoMobile.classList.remove("hidden");
-      userNameMobile.textContent = user.name;
-      userPicMobile.src = user.picture;
-
-      // Logout
-      logoutBtnDesktop.addEventListener("click", () => {
-        localStorage.removeItem("user");
-        window.location.reload();
-      });
-      logoutBtnMobile.addEventListener("click", () => {
-        localStorage.removeItem("user");
-        window.location.reload();
-      });
+    function loadUser() {
+      const user = JSON.parse(localStorage.getItem("user"));
+      const loginBtnDesktop = document.getElementById("login-btn-desktop");
+      const userInfoDesktop = document.getElementById("user-info-desktop");
+      const userNameDesktop = document.getElementById("user-name-desktop");
+      const userPicDesktop = document.getElementById("user-pic-desktop");
+      const logoutBtnDesktop = document.getElementById("logout-btn-desktop");
+      const loginBtnMobile = document.getElementById("login-btn-mobile");
+      const userInfoMobile = document.getElementById("user-info-mobile");
+      const userNameMobile = document.getElementById("user-name-mobile");
+      const userPicMobile = document.getElementById("user-pic-mobile");
+      const logoutBtnMobile = document.getElementById("logout-btn-mobile");
+      if (user) {
+        loginBtnDesktop.classList.add("hidden");
+        userInfoDesktop.classList.remove("hidden");
+        userNameDesktop.textContent = user.name;
+        userPicDesktop.src = user.picture;
+        loginBtnMobile.classList.add("hidden");
+        userInfoMobile.classList.remove("hidden");
+        userNameMobile.textContent = user.name;
+        userPicMobile.src = user.picture;
+        logoutBtnDesktop.addEventListener("click", () => { localStorage.removeItem("user"); window.location.reload(); });
+        logoutBtnMobile.addEventListener("click", () => { localStorage.removeItem("user"); window.location.reload(); });
+      }
     }
-  }
+    document.addEventListener("DOMContentLoaded", loadUser);
+  </script>
 
-  document.addEventListener("DOMContentLoaded", loadUser);
-</script>
+  <main class="pt-32 pb-20">
+    <section id="solicitacao" class="container mx-auto px-6 max-w-2xl">
+      <h1 class="m3-title-medium text-3xl font-bold text-center mb-8">Solicite seu Serviço</h1>
+      
+      <div class="m3-card p-6 mb-8 text-center">
+        <p class="m3-body-medium">
+          Preencha o formulário abaixo para solicitar um serviço. Após enviado, sua solicitação aparecerá na página
+          <a href="servicos.html" class="btn btn-primary mt-2">
+            Ver Serviços
+          </a>
+        </p>
+      </div>
 
-  <!-- Formulário de Solicitação -->
-  <section id="solicitacao" class="py-20">
-    <div class="container mx-auto px-6 max-w-2xl">
-      <h2 class="text-3xl font-bold text-center mb-8">Solicite seu Serviço</h2>
-    <p class="text-gray-700 text-base md:text-lg mb-6 px-4 py-3 bg-gray-100 rounded-lg shadow-sm border border-gray-200">
-      Preencha o formulário abaixo para solicitar um serviço. Após enviado, sua solicitação aparecerá na página <a href="servicos.html" class="text-blue-600 underline hover:text-blue-800 transition">Verificar Serviços</a>.
-    </p></p>
-
-      <!-- Substitua o SRC abaixo pelo link de incorporação do seu Google Forms -->
-      <div class="bg-white p-4 rounded-xl shadow-lg fade-in">
+      <div class="m3-card p-2 fade-in">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfjH2k2fEaF1XbpBNkCvNnm4kG33xKjIAOlSk7WDWstCdmI7g/viewform?usp=dialog"
-          width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" class="w-full rounded-lg">
+          width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
           Carregando…
         </iframe>
       </div>
-    </div>
-  </section>
-    <script>
-        // Script para animação de fade-in
-        document.addEventListener('DOMContentLoaded', () => {
-        const faders = document.querySelectorAll('.fade-in');
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in');
+      setTimeout(() => { // Pequeno delay para garantir que o CSS foi carregado
         faders.forEach(fader => {
-            fader.classList.add('show');
+          fader.classList.add('show');
         });
-        });
-    </script>
- <style>
-  /* Define a paleta de cores do Material Design 3 como CSS Variables */
-  :root {
-    --md-sys-color-primary: #346094; /* Um azul como cor primária */
-    --md-sys-color-on-primary: #FFFFFF;
-    --md-sys-color-surface-container: #EFF3F8; /* Fundo principal, um cinza bem claro */
-    --md-sys-color-on-surface: #1A1C1E; /* Cor do texto principal */
-    --md-sys-color-on-surface-variant: #43474E; /* Cor do texto secundário e ícones */
-    --md-sys-color-outline: #74777F;
-  }
+      }, 100);
+    });
+  </script>
 
-  /* Define classes de componentes reutilizáveis sem @apply */
-  .m3-title-medium {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: .009375em;
-    color: var(--md-sys-color-on-surface);
-  }
-  .m3-border-color-outline {
-    border-top: 1px solid var(--md-sys-color-outline);
-    margin-top: 3rem;
-    padding-top: 2rem;
-    text-align: center;
-    font-size: 0.875rem;
-    line-height: 1.625;
-    color: var(--md-sys-color-on-surface-variant);
-  }
-  .m3-body-medium {
-    font-size: 0.875rem;
-    line-height: 1.625;
-    color: var(--md-sys-color-on-surface-variant);
-  }
-  .m3-label-large {
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--md-sys-color-primary);
-  }
-  .m3-footer-link {
-    position: relative;
-    border-radius: 0.375rem;
-    padding: 0.25rem 0.5rem;
-    color: var(--md-sys-color-on-surface-variant);
-    transition: color 0.2s;
-    outline: none;
-  }
-  .m3-footer-link:hover,
-  .m3-footer-link:focus-visible {
-    color: var(--md-sys-color-primary);
-    background-color: #DBEAFE; /* blue-100 */
-  }
-  .m3-icon-button {
-    position: relative;
-    display: flex;
-    height: 2.5rem;
-    width: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9999px;
-    color: var(--md-sys-color-on-surface-variant);
-    transition: background-color 0.2s, color 0.2s;
-    outline: none;
-  }
-  .m3-icon-button:hover,
-  .m3-icon-button:focus-visible {
-    background-color: #DBEAFE; /* blue-100 */
-    color: var(--md-sys-color-primary);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --md-sys-color-primary: #8AB4F8;
-      --md-sys-color-on-primary: #000000; 
-      --md-sys-color-surface-container: #1A1C1E;
-      --md-sys-color-on-surface: #E1E2E5;
-      --md-sys-color-on-surface-variant: #C1C4C9;
-      --md-sys-color-outline: #5C5F66;
-    }
-    .m3-border-color-outline {    
-      border-top-color: var(--md-sys-color-outline);
-      color: var(--md-sys-color-on-surface-variant);  
-    }
-    .m3-footer-link {
-      &:hover {
-        background-color: #DBEAFE; /* blue-100 */
-        color: var(--md-sys-color-primary);
-      }
-      &:focus-visible {
-        outline: none;
-        background-color: #DBEAFE; /* blue-100 */
-        color: var(--md-sys-color-primary);
-      }
-    }
-    .m3-icon-button {
-      &:hover {
-        background-color: #3B82F6; /* blue-500 */
-        color: var(--md-sys-color-on-primary);
-      }
-      &:focus-visible {
-        outline: none;
-        background-color: #3B82F6; /* blue-500 */
-        color: var(--md-sys-color-on-primary);
-      }
-    }
-  }
-</style>
-
-<footer style="background-color: var(--md-sys-color-surface-container);">
-      <svg class="absolute w-0 h-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <symbol id="icon-facebook" viewBox="0 0 24 24">
-          <path fill="currentColor"
-            d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
-        </symbol>
-        <symbol id="icon-instagram" viewBox="0 0 24 24">
-          <path fill="currentColor"
-            d="M2 6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6zm4-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6zm6 4a4 4 0 1 1 0 8a4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4zm5-3a1 1 0 1 1 0 2a1 1 0 0 1 0-2z" />
-        </symbol>
-        <symbol id="icon-linkedin" viewBox="0 0 24 24">
-          <path fill="currentColor"
-            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-12 5v10h3V11h-3zM8.5 6.5A1.5 1.5 0 1 0 7 8a1.5 1.5 0 0 0 1.5-1.5zM18 18h-3v-4.5c0-1.4-.8-2.5-2-2.5s-2 1.1-2 2.5V18h-3V11h3v1.5c.5-1 1.5-1.5 2.5-1.5s2.5 1 2.5 4.5V18z" />
-        </symbol>
-        <symbol id="icon-x-twitter" viewBox="0 0 24 24">
-          <path fill="currentColor"
-            d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </symbol>
-      </svg>
-
-      <div class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 text-center md:text-left">
-          <div class="lg:col-span-2 space-y-3">
-            <h3 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">ServiçosToledo</h3>
-            <p class="m3-body-medium">
-              Conectando você aos melhores prestadores de serviços em Toledo - MG.
-            </p>
-          </div>
-
-          <div class="space-y-4">
-            <h4 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">Navegação</h4>
-            <ul class="space-y-2">
-              <li><a href="index.html" class="m3-footer-link">Início</a></li>
-              <li><a href="buscar-prestador.html" class="m3-footer-link">Buscar Prestador</a></li>
-              <li><a href="solicitar.html" class="m3-footer-link">Solicitar Serviço</a></li>
-              <li><a href="quero-me-cadastrar.html" class="m3-footer-link">Quero me cadastrar</a></li>
-            </ul>
-          </div>
-
-          <div class="space-y-4">
-            <h4 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">Suporte</h4>
-            <ul class="space-y-2">
-              <li><a href="/contato.html" class="m3-footer-link">Fale Conosco</a></li>
-              <li><a href="https://digs-portifolio.netlify.app/" class="m3-footer-link">Meu Portfólio</a></li>
-            </ul>
-          </div>
-
-          <div class="space-y-4">
-            <h4 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">Redes Sociais</h4>
-            <div class="flex gap-2 justify-center md:justify-start">
-              <a href="https://www.instagram.com/toledoservices/" class="m3-icon-button" aria-label="Instagram">
-                <svg class="w-6 h-6" aria-hidden="true">
-                  <use xlink:href="#icon-instagram" />
-                </svg>
-              </a>
-              <a href="https://www.linkedin.com/in/diego-lima-da-silva-b068b2112" class="m3-icon-button"
-                aria-label="LinkedIn">
-                <svg class="w-6 h-6" aria-hidden="true">
-                  <use xlink:href="#icon-linkedin" />
-                </svg>
-              </a>
-            </div>
-          </div>
+  <footer style="background-color: var(--md-sys-color-surface-container);">
+    <svg class="absolute w-0 h-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M2 6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6zm4-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6zm6 4a4 4 0 1 1 0 8a4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4zm5-3a1 1 0 1 1 0 2a1 1 0 0 1 0-2z" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-12 5v10h3V11h-3zM8.5 6.5A1.5 1.5 0 1 0 7 8a1.5 1.5 0 0 0 1.5-1.5zM18 18h-3v-4.5c0-1.4-.8-2.5-2-2.5s-2 1.1-2 2.5V18h-3V11h3v1.5c.5-1 1.5-1.5 2.5-1.5s2.5 1 2.5 4.5V18z" />
+      </symbol>
+    </svg>
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 text-center md:text-left">
+        <div class="lg:col-span-2 space-y-3">
+          <h3 class="text-2xl font-bold" style="color: var(--md-sys-color-primary);">ServiçosToledo</h3>
+          <p class="m3-body-medium">Conectando você aos melhores prestadores de serviços em Toledo - MG.</p>
         </div>
-
-        <div class="m3-border-color-outline">
-          <p>
-            Desenvolvido por &copy; <span class="font-semibold text-[var(--md-sys-color-on-surface)]">DIGSWARE</span>
-            <span id="current-year"></span>. Todos os direitos reservados.
-          </p>
+        <div class="space-y-4">
+          <h4 class="m3-title-medium">Navegação</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="m3-footer-link">Início</a></li>
+            <li><a href="buscar-prestador.html" class="m3-footer-link">Buscar Prestador</a></li>
+            <li><a href="quero-me-cadastrar.html" class="m3-footer-link">Quero me cadastrar</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h4 class="m3-title-medium">Suporte</h4>
+          <ul class="space-y-2">
+            <li><a href="/contato.html" class="m3-footer-link">Fale Conosco</a></li>
+            <li><a href="https://digs-portifolio.netlify.app/" class="m3-footer-link">Meu Portfólio</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h4 class="m3-title-medium">Redes Sociais</h4>
+          <div class="flex gap-2 justify-center md:justify-start">
+            <a href="https://www.instagram.com/toledoservices/" class="m3-icon-button" aria-label="Instagram">
+              <svg class="w-6 h-6" aria-hidden="true"><use xlink:href="#icon-instagram" /></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/diego-lima-da-silva-b068b2112" class="m3-icon-button" aria-label="LinkedIn">
+              <svg class="w-6 h-6" aria-hidden="true"><use xlink:href="#icon-linkedin" /></svg>
+            </a>
+          </div>
         </div>
       </div>
-      <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-      </script>
-    </footer>
-
+      <div class="m3-border-color-outline">
+        <p>Desenvolvido por &copy; <span style="color: var(--md-sys-color-on-surface); font-weight: 600;">DIGSWARE</span> <span id="current-year"></span>. Todos os direitos reservados.</p>
+      </div>
+    </div>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 
 </body>
+
 </html>
