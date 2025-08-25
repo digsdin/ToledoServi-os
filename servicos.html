@@ -37,104 +37,291 @@
         gtag('config', 'AW-17500892314');
     </script>
 
+<style>
+   /* Define a paleta de cores do Material Design 3 como CSS Variables */
+      :root {
+        --md-sys-color-primary: #346094;
+        /* Um azul como cor primária */
+        --md-sys-color-on-primary: #17171d;
+        --md-sys-color-surface-container: #222020;
+        /* Fundo principal, um cinza bem claro */
+        --md-sys-color-on-surface: #1A1C1E;
+        /* Cor do texto principal */
+        --md-sys-color-on-surface-variant: #43474E;
+        /* Cor do texto secundário e ícones */
+        --md-sys-color-outline: #74777F;
+      }
 
-    <style>
-        .fade-in {
-            animation: fadeIn 0.6s ease-in-out;
+      /* Define classes de componentes reutilizáveis sem @apply */
+      .m3-title-medium {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .009375em;
+        color: var(--md-sys-color-on-surface);
+      }
+
+      .m3-border-color-outline {
+        border-top: 1px solid var(--md-sys-color-outline);
+        margin-top: 3rem;
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--md-sys-color-on-surface-variant);
+      }
+
+      .m3-body-medium {
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--md-sys-color-on-surface-variant);
+      }
+
+      .m3-label-large {
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        color: var(--md-sys-color-primary);
+      }
+
+      .m3-footer-link {
+        position: relative;
+        border-radius: 0.375rem;
+        padding: 0.25rem 0.5rem;
+        color: var(--md-sys-color-on-surface-variant);
+        transition: color 0.2s;
+        outline: none;
+      }
+
+      .m3-footer-link:hover,
+      .m3-footer-link:focus-visible {
+        color: var(--md-sys-color-primary);
+        background-color: #DBEAFE;
+        /* blue-100 */
+      }
+
+      .m3-icon-button {
+        position: relative;
+        display: flex;
+        height: 2.5rem;
+        width: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        color: var(--md-sys-color-on-surface-variant);
+        transition: background-color 0.2s, color 0.2s;
+        outline: none;
+      }
+
+      .m3-icon-button:hover,
+      .m3-icon-button:focus-visible {
+        background-color: #DBEAFE;
+        /* blue-100 */
+        color: var(--md-sys-color-primary);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --md-sys-color-primary: #8AB4F8;
+          --md-sys-color-on-primary: #000000;
+          --md-sys-color-surface-container: #1A1C1E;
+          --md-sys-color-on-surface: #E1E2E5;
+          --md-sys-color-on-surface-variant: #C1C4C9;
+          --md-sys-color-outline: #5C5F66;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .m3-border-color-outline {
+          border-top-color: var(--md-sys-color-outline);
+          color: var(--md-sys-color-on-surface-variant);
         }
+
+        .m3-footer-link {
+          &:hover {
+            background-color: #DBEAFE;
+            /* blue-100 */
+            color: var(--md-sys-color-primary);
+          }
+
+          &:focus-visible {
+            outline: none;
+            background-color: #DBEAFE;
+            /* blue-100 */
+            color: var(--md-sys-color-primary);
+          }
+        }
+
+        .m3-icon-button {
+          &:hover {
+            background-color: #3B82F6;
+            /* blue-500 */
+            color: var(--md-sys-color-on-primary);
+          }
+
+          &:focus-visible {
+            outline: none;
+            background-color: #3B82F6;
+            /* blue-500 */
+            color: var(--md-sys-color-on-primary);
+          }
+        }
+      }
     </style>
+    
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <!-- Header fixo -->
-  <!-- Header fixo -->
-<header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8">
-      <span class="text-2xl font-extrabold tracking-tight text-white">ServiçosToledo</span>
-    </a>
+<body>
 
-    <!-- Menu Desktop -->
-    <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
-      <a href="index.html" class="hover:text-white">Início</a>
-      <a href="contato.html" class="hover:text-white">Contato</a>
-      <a href="buscar-prestador.html" class="hover:text-white">Buscar Prestador</a>
-      <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
-      <a href="quero-me-cadastrar.html"
-         class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-        Quero me cadastrar
+  <style>
+    :root {
+      --color-background: #0D1117;
+      --color-surface: #161B22;
+      --color-primary: #3882F6;
+      --color-primary-hover: #60A5FA;
+      --color-text-primary: #E6EDF3;
+      --color-text-secondary: #8B949E;
+      --color-border: #30363D;
+      --color-success: #2DA44E;
+      --color-danger: #CF222E;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text-primary);
+    }
+
+    .fade-in-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    .card-style {
+      position: relative;
+      background: var(--color-surface);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      transition: all 0.3s ease;
+    }
+
+    .card-style:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 20px rgba(56, 130, 246, 0.2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.2s ease-out;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: white;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-text-primary);
+    }
+
+    .icon-white {
+      filter: invert(1);
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <div class="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[150%] sm:w-[100%] sm:h-[100%]"
+      style="background: radial-gradient(circle, rgba(56,130,246,0.15) 0%, transparent 70%);"></div>
+  </div>
+  <!-- Header -->
+  <header id="main-header"
+    class="fixed top-0 inset-x-0 z-50 transition-all duration-300 backdrop-blur-lg border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8 w-auto">
+        <span class="text-xl font-bold tracking-tight text-white">Serviços Toledo</span>
       </a>
 
-      <!-- Auth Section -->
-      <div id="auth-desktop" class="flex items-center space-x-4">
-        <!-- Botão login -->
-        <a id="login-btn-desktop" href="login.html" 
-           class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-          Entrar
+      <nav class="hidden md:flex items-center gap-2 font-semibold text-gray-300">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="buscar-prestador.html" class="hover:text-white">Profissionais</a>
+        <a href="servicos.html" class="hover:text-white">Serviços</a>
+        <a href="quero-me-cadastrar.html"
+          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+          Quero me cadastrar
         </a>
-        <!-- Info do usuário -->
-        <div id="user-info-desktop" class="hidden items-center space-x-3">
-          <img id="user-pic-desktop" class="w-8 h-8 rounded-full border" alt="User">
-          <span id="user-name-desktop" class="text-white font-semibold"></span>
-          <button id="logout-btn-desktop" 
-            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
-            Sair
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Botão menu mobile -->
-    <button id="menuBtn"
-      class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
-      <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Menu Mobile -->
-  <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
-    <div class="flex flex-col gap-3 font-semibold">
-      <a href="index.html" class="py-2 border-b text-white">Início</a>
-      <a href="buscar-prestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
-      <a href="contato.html" class="py-2 border-b text-white">Contato</a>
-      <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
-      <a href="quero-me-cadastrar.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
-
-      <!-- Auth Section Mobile -->
-      <div id="auth-mobile" class="flex items-center space-x-4">
-        <a id="login-btn-mobile" href="login.html" 
-           class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition w-full text-center">
-          Entrar
-        </a>
-        <div id="user-info-mobile" class="hidden items-center space-x-3 w-full justify-between">
-          <div class="flex items-center gap-2">
-            <img id="user-pic-mobile" class="w-8 h-8 rounded-full border" alt="User">
-            <span id="user-name-mobile" class="text-white font-semibold"></span>
+        <div id="auth-desktop" class="flex items-center gap-2 ml-4">
+          <a id="login-btn-desktop" href="login.html" class="btn btn-secondary"
+            style="background-color: var(--color-success); border-color: transparent;">Entrar</a>
+          <div id="user-info-desktop" class="hidden items-center gap-3">
+            <img id="user-pic-desktop" class="w-8 h-8 rounded-full" alt="User">
+            <span id="user-name-desktop" class="text-white font-semibold"></span>
+            <button id="logout-btn-desktop" class="btn text-xs"
+              style="background-color: var(--color-danger);">Sair</button>
           </div>
-          <button id="logout-btn-mobile" 
-            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
-            Sair
-          </button>
+        </div>
+      </nav>
+
+      <button id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-gray-700 text-gray-300">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 backdrop-blur-xl"
+      style="background-color: rgba(13, 17, 23, 0.9);">
+      <div class="flex flex-col gap-4 font-semibold text-gray-300 border-t border-gray-700 pt-4">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="buscar-prestador.html" class="hover:text-white">Profissionais</a>
+        <a href="servicos.html" class="hover:text-white">Serviços</a>
+
+        <div id="auth-mobile">
+          <a id="login-btn-mobile" href="login.html" class="btn btn-secondary w-full mt-2"
+            style="background-color: var(--color-success); border-color: transparent;">Entrar</a>
+          <div id="user-info-mobile" class="hidden items-center justify-between mt-2">
+            <div class="flex items-center gap-2">
+              <img id="user-pic-mobile" class="w-8 h-8 rounded-full" alt="User">
+              <span id="user-name-mobile" class="text-white font-semibold"></span>
+            </div>
+            <button id="logout-btn-mobile" class="btn text-xs"
+              style="background-color: var(--color-danger);">Sair</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
 <script>
   // Controle do menu mobile
@@ -190,16 +377,16 @@
 </script>
 
     <main class="container mx-auto px-6 py-24">
-        <h2 class="text-3xl font-bold text-center mb-8">Lista de Serviços Solicitados</h2>
-        <h1 class="text-xl font-semibold text-center mb-8">Encontre o serviço que você precisa</h1>
-        <img src="images/logo.png" alt="Profissionais em Toledo"
-            class="mx-auto mb-6 rounded-xl shadow-lg max-h-32 w-auto">
+      <div class="mx-auto mb-6 rounded-xl shadow-lg max-h-32 w-auto">
+        <h2 class="text-3xl font-bold text-center mb-8 text-blue-300">Serviços Disponíveis</h2>
+        <div class="text-center mb-4 m3-body-medium">Veja a lista de serviços solicitados em <strong>Toledo - MG</strong>.</div>
+      </div>
 
         <!-- Barra de busca e ordenação -->
-        <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">
+        <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-8 text-gray-800">
             <input id="searchInput" type="text" placeholder="Buscar por nome, serviço ou endereço..."
-                class="w-full md:w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
-            <select id="sortSelect" class="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                class="w-full md:w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800">
+            <select id="sortSelect" class="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800">
                 <option value="recent">Mais recentes</option>
                 <option value="oldest">Mais antigos</option>
             </select>
@@ -261,16 +448,17 @@
                 const endereco = row["Endereço"] || "Toledo - MG";
 
                 const card = document.createElement("div");
-                card.className = "bg-white rounded-xl shadow-lg p-6 fade-in";
+                card.className = "bg-gray-800 rounded-xl shadow-lg p-6 fade-in";
                 card.innerHTML = `
-        <h3 class="text-xl font-semibold mb-2 text-blue-600 text-center">${servico}</h3>
-        <p><span class="font-bold">Nome:</span> ${nome}</p>
+        <h3 class="text-xl font-semibold mb-2 text-blue-300 text-center">${nome}</h3>
+        <p><span class="font-bold">Profissão: </span> ${servico}</p>
         <p class="mt-2"><span class="font-bold">Descrição:</span> ${descricao}</p>
-        <p class="text-sm text-gray-500 mt-2">📅 ${timestamp}</p>
-        <p class="text-sm text-gray-500 mt-2">📞 <a href="tel:${telefone}" class="text-blue-500">${telefone}</a></p>
-        <p class="text-sm text-gray-500 mt-2">📍 ${endereco}</p>
+        <p class="text-sm text-white mt-2">📅 ${timestamp}</p>
+        <p class="text-sm text-white mt-2">📞 <a href="tel:${telefone}" class="text-blue-500">${telefone}</a></p>
+        <p class="text-sm text-white mt-2">📍 ${endereco}</p>
         <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}"
           target="_blank" class="text-blue-500 hover:underline mt-2 block">Ver no mapa</a>
+
       `;
                 fragment.appendChild(card);
             });
