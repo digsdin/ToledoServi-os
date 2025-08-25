@@ -1,75 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z56W62B846"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Z56W62B846');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços de Reforma, Construção e Manutenção em Toledo - MG | Serviços Toledo</title>
   <meta name="description"
-    content="Serviços Toledo oferece profissionais qualificados para reforma, construção e manutenção em Toledo - MG. Solicite orçamentos rápidos e confiáveis.">
+    content="Encontre profissionais qualificados para reforma, construção e manutenção em Toledo - MG. Orçamentos rápidos e confiáveis com a Serviços Toledo.">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="Serviços Toledo">
-  <meta property="og:description" content="Reformas, construções e manutenção em Toledo.">
-  <meta property="og:image" content="https://toledoservice.com.br/logo.png">
+  <meta property="og:description" content="A plataforma que conecta você aos melhores profissionais em Toledo - MG.">
+  <meta property="og:image" content="https://toledoservice.com.br/images/og-image.png">
   <meta property="og:url" content="https://toledoservice.com.br">
   <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" href="/images/favicon.jpg" sizes="any">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
   <link rel="manifest" href="/images/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z56W62B846"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
     crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17500892314"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-Z56W62B846');
+    gtag('config', 'AW-17500892314');
+  </script>
   <!-- Schema.org JSON-LD para SEO Local -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Serviços Toledo",
-    "image": "https://toledoservice.com.br/images/logo.png",
-    "@id": "https://toledoservice.com.br",
-    "url": "https://toledoservice.com.br",
-    "telephone": "+55-35-99978-9722",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Luiz Augusto Alves, 25",
-      "addressLocality": "Toledo",
-      "addressRegion": "MG",
-      "postalCode": "37630-000",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -24.7244,
-      "longitude": -53.7402
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/seuusuario",
-      "https://www.instagram.com/toledoservices"
-    ]
-  }
-  </script>
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Serviços Toledo",
+      "image": "https://toledoservice.com.br/images/logo.png",
+      "url": "https://toledoservice.com.br",
+      "telephone": "+55-35-99978-9722",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Luiz Augusto Alves, 25",
+        "addressLocality": "Toledo",
+        "addressRegion": "MG",
+        "postalCode": "37630-000",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [{"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens": "08:00","closes": "18:00"}]
+    }
+    </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -78,399 +62,587 @@
     gtag('event', 'conversion', { 'send_to': 'AW-17500892314/iEPWCPaH44sbEJrZiZlB' });
   </script>
 
-
   <style>
+    :root {
+      --color-background: #0D1117;
+      --color-surface: #161B22;
+      --color-primary: #3882F6;
+      --color-primary-hover: #60A5FA;
+      --color-text-primary: #E6EDF3;
+      --color-text-secondary: #8B949E;
+      --color-border: #30363D;
+      --color-success: #2DA44E;
+      --color-danger: #CF222E;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text-primary);
     }
 
-    .fade-in {
+    .fade-in-item {
       opacity: 0;
       transform: translateY(20px);
-      transition: all 0.8s ease;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
+    .text-gradient {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
 
-    /* Adicione estas novas regras para o logo */
-    .logo-container {
+    .card-style {
+      position: relative;
+      background: var(--color-surface);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      transition: all 0.3s ease;
+    }
+
+    .card-style:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 20px rgba(56, 130, 246, 0.2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
       text-align: center;
-      padding: 10px 0;
-      /* Adiciona um pequeno espaçamento */
+      transition: all 0.2s ease-out;
     }
 
-    .logo-img {
-      max-height: 80px;
-      /* Você pode ajustar este tamanho */
-      width: auto;
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: white;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
-    /* Ajuste para remover a formatação de texto do header antigo */
-    header h1,
-    header p {
-      display: none;
-      /* Esconde o texto antigo do cabeçalho */
+    .btn-primary:hover {
+      background-color: var(--color-primary-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-text-primary);
+    }
+
+    .icon-white {
+      filter: invert(1);
     }
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="antialiased">
 
-
-  <!-- Header fixo -->
-  <header class="fixed top-0 inset-x-0 z-50 bg-gray-900 backdrop-blur border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8" loading="lazy">
-        <span class="text-2xl font-extrabold tracking-tight text-white">Serviços Toledo</span>
+  <div class="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[150%] sm:w-[100%] sm:h-[100%]"
+      style="background: radial-gradient(circle, rgba(56,130,246,0.15) 0%, transparent 70%);"></div>
+  </div>
+  <!-- Header -->
+  <header id="main-header"
+    class="fixed top-0 inset-x-0 z-50 transition-all duration-300 backdrop-blur-lg border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Logo Serviços Toledo" class="h-8 w-auto">
+        <span class="text-xl font-bold tracking-tight text-white">Serviços Toledo</span>
       </a>
 
-      <!-- Menu Desktop -->
-      <nav class="hidden md:flex items-center gap-8 text-white font-semibold">
+      <nav class="hidden md:flex items-center gap-2 font-semibold text-gray-300">
         <a href="index.html" class="hover:text-white">Início</a>
         <a href="contato.html" class="hover:text-white">Contato</a>
         <a href="buscar-prestador.html" class="hover:text-white">Buscar Prestador</a>
         <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
-        <a href="quero-me-cadastrar.html" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+        <a href="quero-me-cadastrar.html"
+          class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">
           Quero me cadastrar
         </a>
-
-        <!-- Auth Section -->
-        <div id="auth-desktop" class="flex items-center space-x-4">
-          <!-- Botão login -->
-          <a id="login-btn-desktop" href="login.html"
-            class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-            Entrar
-          </a>
-          <!-- Info do usuário -->
-          <div id="user-info-desktop" class="hidden items-center space-x-3">
-            <img id="user-pic-desktop" class="w-8 h-8 rounded-full border" alt="User">
+        <div id="auth-desktop" class="flex items-center gap-2 ml-4">
+          <a id="login-btn-desktop" href="login.html" class="btn btn-secondary"
+            style="background-color: var(--color-success); border-color: transparent;">Entrar</a>
+          <div id="user-info-desktop" class="hidden items-center gap-3">
+            <img id="user-pic-desktop" class="w-8 h-8 rounded-full" alt="User">
             <span id="user-name-desktop" class="text-white font-semibold"></span>
-            <button id="logout-btn-desktop" class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
-              Sair
-            </button>
+            <button id="logout-btn-desktop" class="btn text-xs"
+              style="background-color: var(--color-danger);">Sair</button>
           </div>
         </div>
       </nav>
 
-      <!-- Botão menu mobile -->
       <button id="menuBtn"
-        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white hover:bg-gray-800">
-        <svg class="h-5 w-5" fill="none" stroke="white" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-gray-700 text-gray-300">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
 
-    <!-- Menu Mobile -->
-    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
-      <div class="flex flex-col gap-3 font-semibold">
-        <a href="index.html" class="py-2 border-b text-white">Início</a>
-        <a href="buscar-prestador.html" class="py-2 border-b text-white">Buscar Prestador</a>
-        <a href="contato.html" class="py-2 border-b text-white">Contato</a>
-        <a href="servicos.html" class="py-2 border-b text-white">Verificar Serviços</a>
-        <a href="quero-me-cadastrar.html" class="py-2 text-white bg-blue-600 rounded-lg text-center">Quero me cadastrar</a>
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 backdrop-blur-xl"
+      style="background-color: rgba(13, 17, 23, 0.9);">
+      <div class="flex flex-col gap-4 font-semibold text-gray-300 border-t border-gray-700 pt-4">
+        <a href="index.html" class="hover:text-white">Início</a>
+        <a href="contato.html" class="hover:text-white">Contato</a>
+        <a href="buscar-prestador.html" class="hover:text-white">Buscar Prestador</a>
+        <a href="servicos.html" class="hover:text-white">Verificar Serviços</a>
 
-        <!-- Auth Section Mobile -->
-        <div id="auth-mobile" class="flex items-center space-x-4">
-          <a id="login-btn-mobile" href="login.html"
-            class="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition w-full text-center">
-            Entrar
-          </a>
-          <div id="user-info-mobile" class="hidden items-center space-x-3 w-full justify-between">
+        <div id="auth-mobile">
+          <a id="login-btn-mobile" href="login.html" class="btn btn-secondary w-full mt-2"
+            style="background-color: var(--color-success); border-color: transparent;">Entrar</a>
+          <div id="user-info-mobile" class="hidden items-center justify-between mt-2">
             <div class="flex items-center gap-2">
-              <img id="user-pic-mobile" class="w-8 h-8 rounded-full border" alt="User">
+              <img id="user-pic-mobile" class="w-8 h-8 rounded-full" alt="User">
               <span id="user-name-mobile" class="text-white font-semibold"></span>
             </div>
-            <button id="logout-btn-mobile" class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">
-              Sair
-            </button>
+            <button id="logout-btn-mobile" class="btn text-xs"
+              style="background-color: var(--color-danger);">Sair</button>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <script>
-    // Controle do menu mobile
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+  <main>
+    <section class="pt-40 pb-28 text-center">
+      <div class="container mx-auto px-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white fade-in-item">Profissionais
+          Qualificados em <span class="text-gradient">Toledo - MG</span></h1>
+        <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto fade-in-item"
+          style="color: var(--color-text-secondary); transition-delay: 150ms;">Conectamos você aos melhores
+          prestadores de serviço para sua reforma, construção ou manutenção. Rápido, prático e confiável.</p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 fade-in-item"
+          style="transition-delay: 300ms;">
+          <a href="solicitar.html" class="w-full md:w-auto btn btn-primary">Solicitar Orçamento Gratuito</a>
+          <a href="quero-me-cadastrar.html" class="w-full md:w-auto btn btn-secondary">Sou Profissional</a>
+        </div>
 
-    // Função para carregar usuário
-    function loadUser() {
-      const user = JSON.parse(localStorage.getItem("user"));
+      </div>
+    </section>
 
-      // Desktop
-      const loginBtnDesktop = document.getElementById("login-btn-desktop");
-      const userInfoDesktop = document.getElementById("user-info-desktop");
-      const userNameDesktop = document.getElementById("user-name-desktop");
-      const userPicDesktop = document.getElementById("user-pic-desktop");
-      const logoutBtnDesktop = document.getElementById("logout-btn-desktop");
+    <section id="como-funciona" class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white">Tudo em 3 Passos Simples</h2>
+          <p class="mt-4 max-w-2xl mx-auto" style="color: var(--color-text-secondary);">Nosso processo foi
+            desenhado para ser o mais fácil e rápido para você.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 animated-cards">
+          <div class="card-style text-center">
+            <h3 class="font-semibold text-xl mb-3 text-white">1. Descreva o Serviço</h3>
+            <p style="color: var(--color-text-secondary);">Preencha nosso formulário inteligente em menos de
+              2 minutos.</p>
+          </div>
+          <div class="card-style text-center">
+            <h3 class="font-semibold text-xl mb-3 text-white">2. Conecte-se</h3>
+            <p style="color: var(--color-text-secondary);">Enviamos sua solicitação para os profissionais
+              mais qualificados.</p>
+          </div>
+          <div class="card-style text-center">
+            <h3 class="font-semibold text-xl mb-3 text-white">3. Escolha o Melhor</h3>
+            <p style="color: var(--color-text-secondary);">Receba orçamentos, compare e escolha o
+              profissional ideal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
+      crossorigin="anonymous"></script>
+    <!-- retangle -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5133424908957621" data-ad-slot="3611240585"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
-      // Mobile
-      const loginBtnMobile = document.getElementById("login-btn-mobile");
-      const userInfoMobile = document.getElementById("user-info-mobile");
-      const userNameMobile = document.getElementById("user-name-mobile");
-      const userPicMobile = document.getElementById("user-pic-mobile");
-      const logoutBtnMobile = document.getElementById("logout-btn-mobile");
-
-      if (user) {
-        // Mostrar infos
-        loginBtnDesktop.classList.add("hidden");
-        userInfoDesktop.classList.remove("hidden");
-        userNameDesktop.textContent = user.name;
-        userPicDesktop.src = user.picture;
-
-        loginBtnMobile.classList.add("hidden");
-        userInfoMobile.classList.remove("hidden");
-        userNameMobile.textContent = user.name;
-        userPicMobile.src = user.picture;
-
-        // Logout
-        logoutBtnDesktop.addEventListener("click", () => {
-          localStorage.removeItem("user");
-          window.location.reload();
-        });
-        logoutBtnMobile.addEventListener("click", () => {
-          localStorage.removeItem("user");
-          window.location.reload();
-        });
+    <section id="servicos" class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white">Serviços Populares</h2>
+          <p class="mt-4 max-w-2xl mx-auto" style="color: var(--color-text-secondary);">Encontre ajuda para
+            qualquer tipo de projeto, grande ou pequeno.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 animated-cards">
+          <div class="card-style text-center">
+            <img src="https://img.icons8.com/ios-filled/100/electricity.png" class="mx-auto mb-4 h-12 w-12 icon-white"
+              alt="Eletricista" loading="lazy">
+            <h3 class="font-semibold text-white">Eletricista</h3>
+          </div>
+          <div class="card-style text-center"><img src="https://img.icons8.com/ios-filled/100/water.png"
+              class="mx-auto mb-4 h-12 w-12 icon-white" alt="Encanador" loading="lazy">
+            <h3 class="font-semibold text-white">Encanador</h3>
+          </div>
+          <div class="card-style text-center"><img src="https://img.icons8.com/ios-filled/100/paint.png"
+              class="mx-auto mb-4 h-12 w-12 icon-white" alt="Pintor" loading="lazy">
+            <h3 class="font-semibold text-white">Pintor</h3>
+          </div>
+          <div class="card-style text-center"><img src="https://img.icons8.com/ios-filled/100/brick-wall.png"
+              class="mx-auto mb-4 h-12 w-12 icon-white" alt="Pedreiro" loading="lazy">
+            <h3 class="font-semibold text-white">Pedreiro</h3>
+          </div>
+          <div class="card-style text-center"><img src="https://img.icons8.com/ios-filled/100/delivery.png"
+              class="mx-auto mb-4 h-12 w-12 icon-white" alt="Carreto" loading="lazy">
+            <h3 class="font-semibold text-white">Carretos</h3>
+          </div>
+          <div class="card-style text-center"><img src="https://img.icons8.com/ios-filled/100/scooter.png"
+              class="mx-auto mb-4 h-12 w-12 icon-white" alt="Motoboy" loading="lazy">
+            <h3 class="font-semibold text-white">Motoboy</h3>
+          </div>
+          <div class="card-style text-center"><img src="https://img.icons8.com/ios-filled/100/wardrobe.png"
+              class="mx-auto mb-4 h-12 w-12 icon-white" alt="Montador de Móveis" loading="lazy">
+            <h3 class="font-semibold text-white">Montador</h3>
+          </div>
+          <div class="card-style text-center"><img src="https://img.icons8.com/ios-filled/100/lawn-mower.png"
+              class="mx-auto mb-4 h-12 w-12 icon-white" alt="Jardineiro" loading="lazy">
+            <h3 class="font-semibold text-white">Jardineiro</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
+      crossorigin="anonymous"></script>
+    <!-- retangle -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5133424908957621" data-ad-slot="3611240585"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <style>
+      /* Define a paleta de cores do Material Design 3 como CSS Variables */
+      :root {
+        --md-sys-color-primary: #346094;
+        /* Um azul como cor primária */
+        --md-sys-color-on-primary: #FFFFFF;
+        --md-sys-color-surface-container: #EFF3F8;
+        /* Fundo principal, um cinza bem claro */
+        --md-sys-color-on-surface: #1A1C1E;
+        /* Cor do texto principal */
+        --md-sys-color-on-surface-variant: #43474E;
+        /* Cor do texto secundário e ícones */
+        --md-sys-color-outline: #74777F;
       }
-    }
 
-    document.addEventListener("DOMContentLoaded", loadUser);
-  </script>
+      /* Define classes de componentes reutilizáveis sem @apply */
+      .m3-title-medium {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .009375em;
+        color: var(--md-sys-color-on-surface);
+      }
 
+      .m3-border-color-outline {
+        border-top: 1px solid var(--md-sys-color-outline);
+        margin-top: 3rem;
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--md-sys-color-on-surface-variant);
+      }
 
+      .m3-body-medium {
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--md-sys-color-on-surface-variant);
+      }
 
+      .m3-label-large {
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        color: var(--md-sys-color-primary);
+      }
 
-  <!-- Hero Section -->
-  <section class="pt-32 pb-20 bg-gradient-to-r from-gray-800 to-blue-400 text-white text-center">
-    <div class="container mx-auto px-6 fade-in">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">Encontre profissionais qualificados em Toledo - MG</h2>
-      <p class="text-lg md:text-xl mb-8">Solicite serviços de forma rápida, prática e confiável.</p>
-      <img src="images/logo.png" alt="Profissionais em Toledo" class="mx-auto mb-6 rounded-xl shadow-lg max-h-64 w-auto"
-        loading="lazy">
-      <!-- Botão redirecionando para a página do formulário -->
-      <div class="flex flex-col md:flex-row justify-center gap-4">
+      .m3-footer-link {
+        position: relative;
+        border-radius: 0.375rem;
+        padding: 0.25rem 0.5rem;
+        color: var(--md-sys-color-on-surface-variant);
+        transition: color 0.2s;
+        outline: none;
+      }
+
+      .m3-footer-link:hover,
+      .m3-footer-link:focus-visible {
+        color: var(--md-sys-color-primary);
+        background-color: #DBEAFE;
+        /* blue-100 */
+      }
+
+      .m3-icon-button {
+        position: relative;
+        display: flex;
+        height: 2.5rem;
+        width: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        color: var(--md-sys-color-on-surface-variant);
+        transition: background-color 0.2s, color 0.2s;
+        outline: none;
+      }
+
+      .m3-icon-button:hover,
+      .m3-icon-button:focus-visible {
+        background-color: #DBEAFE;
+        /* blue-100 */
+        color: var(--md-sys-color-primary);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --md-sys-color-primary: #8AB4F8;
+          --md-sys-color-on-primary: #000000;
+          --md-sys-color-surface-container: #1A1C1E;
+          --md-sys-color-on-surface: #E1E2E5;
+          --md-sys-color-on-surface-variant: #C1C4C9;
+          --md-sys-color-outline: #5C5F66;
+        }
+
+        .m3-border-color-outline {
+          border-top-color: var(--md-sys-color-outline);
+          color: var(--md-sys-color-on-surface-variant);
+        }
+
+        .m3-footer-link {
+          &:hover {
+            background-color: #DBEAFE;
+            /* blue-100 */
+            color: var(--md-sys-color-primary);
+          }
+
+          &:focus-visible {
+            outline: none;
+            background-color: #DBEAFE;
+            /* blue-100 */
+            color: var(--md-sys-color-primary);
+          }
+        }
+
+        .m3-icon-button {
+          &:hover {
+            background-color: #3B82F6;
+            /* blue-500 */
+            color: var(--md-sys-color-on-primary);
+          }
+
+          &:focus-visible {
+            outline: none;
+            background-color: #3B82F6;
+            /* blue-500 */
+            color: var(--md-sys-color-on-primary);
+          }
+        }
+      }
+    </style>
+    <!-- Nova seção no final antes do rodapé -->
+    <section class="m3-border-color-outline   py-16 text-center">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">Precisa de um serviço agora?</h2>
+        <p class="mb-8 text-lg text-white">Clique abaixo e faça sua solicitação em poucos minutos.</p>
         <a href="solicitar.html"
-          class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+          class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow hover:bg-blue-700 transition">
           Solicitar Serviço
         </a>
-        <a href="quero-me-cadastrar.html"
-          class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-100 transition">
-          Cadastrar Profissional
-        </a>
       </div>
+    </section>
 
-  </section>
+    <footer style="background-color: var(--md-sys-color-surface-container);">
+      <svg class="absolute w-0 h-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="icon-facebook" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M2 6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6zm4-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6zm6 4a4 4 0 1 1 0 8a4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4zm5-3a1 1 0 1 1 0 2a1 1 0 0 1 0-2z" />
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-12 5v10h3V11h-3zM8.5 6.5A1.5 1.5 0 1 0 7 8a1.5 1.5 0 0 0 1.5-1.5zM18 18h-3v-4.5c0-1.4-.8-2.5-2-2.5s-2 1.1-2 2.5V18h-3V11h3v1.5c.5-1 1.5-1.5 2.5-1.5s2.5 1 2.5 4.5V18z" />
+        </symbol>
+        <symbol id="icon-x-twitter" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M18.244 2.25h3.308l-7.227 8.26l8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </symbol>
+      </svg>
 
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 text-center md:text-left">
+          <div class="lg:col-span-2 space-y-3">
+            <h3 class="text-2xl font-bold text-[var(--md-sys-color-primary)]">ServiçosToledo</h3>
+            <p class="m3-body-medium">
+              Conectando você aos melhores prestadores de serviços em Toledo - MG.
+            </p>
+          </div>
 
-  <!-- Como Funciona -->
-  <section id="como-funciona" class="py-20">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">Como Funciona</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-xl shadow-lg fade-in hover:scale-105 transform transition">
-          <h3 class="font-semibold text-xl mb-3">1. Escolha o Serviço</h3>
-          <p>Selecione entre diversas categorias como eletricista, encanador, pintor e muito mais.</p>
+          <div class="space-y-4">
+            <h4 class="m3-title-medium">Navegação</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="m3-footer-link">Início</a></li>
+              <li><a href="buscar-prestador.html" class="m3-footer-link">Buscar Prestador</a></li>
+              <li><a href="solicitar.html" class="m3-footer-link">Solicitar Serviço</a></li>
+              <li><a href="quero-me-cadastrar.html" class="m3-footer-link">Quero me cadastrar</a></li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="m3-title-medium">Suporte</h4>
+            <ul class="space-y-2">
+              <li><a href="/contato.html" class="m3-footer-link">Fale Conosco</a></li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="m3-title-medium">Redes Sociais</h4>
+            <div class="flex gap-2 justify-center md:justify-start">
+              <a href="https://www.instagram.com/toledoservices/" class="m3-icon-button" aria-label="Instagram">
+                <svg class="w-6 h-6" aria-hidden="true">
+                  <use xlink:href="#icon-instagram" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/diego-lima-da-silva-b068b2112" class="m3-icon-button"
+                aria-label="LinkedIn">
+                <svg class="w-6 h-6" aria-hidden="true">
+                  <use xlink:href="#icon-linkedin" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-lg fade-in hover:scale-105 transform transition">
-          <h3 class="font-semibold text-xl mb-3">2. Preencha os Detalhes</h3>
-          <p>Descreva sua necessidade e nos ajude a conectar você ao profissional ideal.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-lg fade-in hover:scale-105 transform transition">
-          <h3 class="font-semibold text-xl mb-3">3. Receba Contato</h3>
-          <p>Profissionais qualificados entram em contato e você escolhe o melhor.</p>
+
+        <div class="m3-border-color-outline">
+          <p>
+            Desenvolvido por &copy; <span class="font-semibold text-[var(--md-sys-color-on-surface)]">DIGSWARE</span>
+            <span id="current-year"></span>. Todos os direitos reservados.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
-    crossorigin="anonymous"></script>
-  <!-- retangle -->
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5133424908957621" data-ad-slot="3611240585"
-    data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </main>
+
   <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    // Bloco de scripts para interatividade da página
+    document.addEventListener("DOMContentLoaded", function () {
 
+      // Efeito do Header ao rolar a página
+      const header = document.getElementById('main-header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 10) {
+            header.style.borderColor = 'var(--color-border)';
+            header.style.backgroundColor = 'rgba(13, 17, 23, 0.8)';
+          } else {
+            header.style.borderColor = 'transparent';
+            header.style.backgroundColor = 'transparent';
+          }
+        });
+      }
 
-  <!-- Serviços em destaque -->
-  <section id="servicos" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">Serviços Populares</h2>
-      <div class="grid md:grid-cols-4 gap-6">
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition fade-in">
-          <img src="https://img.icons8.com/ios-filled/100/electricity.png" alt="Serviços de reforma em Toledo - MG"
-            class="mx-auto mb-4">
-          <h3 class="font-semibold text-lg" loading="lazy">Eletricista</h3>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition fade-in">
-          <img src="https://img.icons8.com/ios-filled/100/water.png" alt="Serviços de reforma em Toledo - MG"
-            class="mx-auto mb-4">
-          <h3 class="font-semibold text-lg" loading="lazy">Encanador</h3>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition fade-in">
-          <img src="https://img.icons8.com/ios-filled/100/paint.png" alt="Serviços de reforma em Toledo - MG"
-            class="mx-auto mb-4">
-          <h3 class="font-semibold text-lg" loading="lazy">Pintor</h3>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition fade-in">
-          <img src="https://img.icons8.com/ios-filled/100/brick-wall.png" alt="Serviços de reforma em Toledo - MG"
-            class="mx-auto mb-4">
-          <h3 class="font-semibold text-lg" loading="lazy">Pedreiro</h3>
-        </div>
-        <!-- Carreto / Transporte / Mudanças -->
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition fade-in">
-          <img src="https://img.icons8.com/ios-filled/100/delivery.png" alt="Serviços de reforma em Toledo - MG"
-            class="mx-auto mb-4">
-          <h3 class="font-semibold text-lg" loading="lazy">Carreto / Transporte / Mudanças</h3>
-        </div>
+      // Controle do Menu Mobile
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
 
-        <!-- Entregadores / Motoboy -->
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition fade-in">
-          <img src="https://img.icons8.com/ios-filled/100/scooter.png" alt="Serviços de reforma em Toledo - MG"
-            class="mx-auto mb-4">
-          <h3 class="font-semibold text-lg" loading="lazy">Entregadores / Motoboy</h3>
-        </div>
-        <!-- Montador -->
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition fade-in">
-          <img src="https://img.icons8.com/ios-filled/100/wardrobe.png" alt="Serviços de reforma em Toledo - MG"
-            class="mx-auto mb-4">
-          <h3 class="font-semibold text-lg" loading="lazy">Montador de móveis</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5133424908957621"
-    crossorigin="anonymous"></script>
-  <!-- retangle -->
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5133424908957621" data-ad-slot="3611240585"
-    data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+      // Animação de entrada dos elementos
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
 
-  <!-- Nova seção no final antes do rodapé -->
-  <section class="py-20 bg-blue-50 text-center fade-in">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6">Precisa de um serviço agora?</h2>
-      <p class="mb-8 text-lg text-gray-700">Clique abaixo e faça sua solicitação em poucos minutos.</p>
-      <a href="solicitar.html"
-        class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow hover:bg-blue-700 transition">
-        Solicitar Serviço
-      </a>
-    </div>
-  </section>
+      document.querySelectorAll('.fade-in-item').forEach(el => { observer.observe(el); });
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-12 mt-12 text-center">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      const cardsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            Array.from(entry.target.children).forEach((child, index) => {
+              setTimeout(() => {
+                child.style.opacity = '1';
+                child.style.transform = 'translateY(0)';
+              }, index * 100);
+            });
+            cardsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
 
-      <!-- Logo + Descrição -->
-      <div>
-        <h3 class="text-2xl font-bold text-white mb-3">ServiçosToledo</h3>
-        <p class="text-gray-400 leading-relaxed">
-          Conectando você aos melhores prestadores de serviços em Toledo - MG.
-        </p>
-      </div>
-
-      <!-- Navegação -->
-      <div>
-        <h4 class="text-lg font-semibold text-white mb-3">Navegação</h4>
-        <ul class="space-y-2">
-          <li><a href="index.html" class="hover:text-white transition">Início</a></li>
-          <li><a href="buscaprestador.html" class="hover:text-white transition">Buscar Prestador</a></li>
-          <li><a href="solicitar.html" class="hover:text-white transition">Solicitar Serviço</a></li>
-          <li><a href="prestadores.html" class="hover:text-white transition">Quero me cadastrar</a></li>
-        </ul>
-      </div>
-
-      <!-- Suporte -->
-      <div>
-        <h4 class="text-lg font-semibold text-white mb-3">Suporte</h4>
-        <ul class="space-y-2">
-          <li><a href="contato.html" class="hover:text-white transition">Fale Conosco</a></li>
-        </ul>
-      </div>
-
-      <!-- Redes Sociais -->
-      <div class="flex flex-col items-center"></div>
-      <h4 class="text-lg font-semibold text-white mb-3">Redes Sociais</h4>
-      <ul class="flex items-center justify-center gap-4 flex-nowrap overflow-x-auto">
-        <li>
-          <a href="#" class="inline-flex items-center justify-center hover:opacity-90 transition" aria-label="Facebook">
-            <svg class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.592 1.325-1.326V1.326C24 .592 23.405 0 22.675 0">
-              </path>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/toledoservices/"
-            class="inline-flex items-center justify-center hover:opacity-90 transition" aria-label="Instagram">
-            <svg class="w-6 h-6 text-pink-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.976 1.246 2.243 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.976.975-2.243 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.976-1.246-2.243-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.976-.975 2.243-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.131 4.602.396 3.635 1.363c-.967.967-1.232 2.14-1.291 3.417C2.013 8.332 2 8.741 2 12c0 3.259.013 3.668.072 4.948.059 1.277.324 2.45 1.291 3.417.967.967 2.14 1.232 3.417 1.291C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.277-.059 2.45-.324 3.417-1.291.967-.967 1.232-2.14 1.291-3.417.059-1.28.072-1.689.072-4.948s-.013-3.668-.072-4.948c-.059-1.277-.324-2.45-1.291-3.417-.967-.967-2.14-1.232-3.417-1.291C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z">
-              </path>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/diego-lima-da-silva-b068b2112"
-            class="inline-flex items-center justify-center hover:opacity-90 transition" aria-label="LinkedIn">
-            <svg class="w-6 h-6 text-blue-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.327-.027-3.037-1.849-3.037-1.851 0-2.132 1.445-2.132 2.939v5.667H9.358V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.37-1.849 3.602 0 4.267 2.369 4.267 5.455v6.285zM5.337 7.433c-1.144 0-2.069-.926-2.069-2.069 0-1.143.925-2.069 2.069-2.069 1.143 0 2.068.926 2.068 2.069 0 1.143-.925 2.069-2.068 2.069zm1.777 13.019H3.56V9h3.554v11.452z">
-              </path>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="inline-flex items-center justify-center hover:opacity-90 transition" aria-label="Twitter">
-            <svg class="w-6 h-6 text-sky-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 0 0-8.38 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.543.938-.855 2.021-.855 3.17 0 2.188 1.115 4.117 2.823 5.254a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.418A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z">
-              </path>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-
-    <!-- Copyright -->
-    <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
-      Desenvolvido por &copy;<span class="font-semibold text-white">DIGSWARE</span> 2025 <span
-        class="font-semibold text-white">ServiçosToledo</span>. Todos os direitos reservados.
-    </div>
-  </footer>
-
-  <!-- JS animações -->
-  <script>
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
+      document.querySelectorAll('.animated-cards').forEach(container => {
+        Array.from(container.children).forEach(child => {
+          child.style.opacity = '0';
+          child.style.transform = 'translateY(20px)';
+        });
+        cardsObserver.observe(container);
       });
-    }, { threshold: 0.2 });
 
-    fadeEls.forEach(el => observer.observe(el));
+      // Carrega dados do usuário (Login/Logout)
+      const user = JSON.parse(localStorage.getItem("user"));
+      const elements = {
+        loginDesktop: document.getElementById("login-btn-desktop"),
+        userInfoDesktop: document.getElementById("user-info-desktop"),
+        userNameDesktop: document.getElementById("user-name-desktop"),
+        userPicDesktop: document.getElementById("user-pic-desktop"),
+        logoutDesktop: document.getElementById("logout-btn-desktop"),
+        loginMobile: document.getElementById("login-btn-mobile"),
+        userInfoMobile: document.getElementById("user-info-mobile"),
+        userNameMobile: document.getElementById("user-name-mobile"),
+        userPicMobile: document.getElementById("user-pic-mobile"),
+        logoutMobile: document.getElementById("logout-btn-mobile"),
+      };
+
+      if (user) {
+        // Esconde botões de login
+        elements.loginDesktop.classList.add("hidden");
+        elements.loginMobile.classList.add("hidden");
+
+        // Mostra informações do usuário
+        elements.userInfoDesktop.classList.remove("hidden");
+        elements.userNameDesktop.textContent = user.name;
+        elements.userPicDesktop.src = user.picture;
+        elements.userInfoMobile.classList.remove("hidden");
+        elements.userNameMobile.textContent = user.name;
+        elements.userPicMobile.src = user.picture;
+
+        // Função de logout
+        const logout = () => {
+          localStorage.removeItem("user");
+          window.location.reload();
+        };
+        elements.logoutDesktop.addEventListener("click", logout);
+        elements.logoutMobile.addEventListener("click", logout);
+      }
+
+      // Atualiza o ano no rodapé
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // Inicializa AdSense
+      (adsbygoogle = window.adsbygoogle || []).push({});
+
+    });
   </script>
-
-
-
-
 </body>
 
 </html>
